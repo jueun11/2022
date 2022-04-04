@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0; list-style: none;}
+    #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+    nav {
+      width: 100vw;
+      /* height: 50vh; */
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+    }
+    nav > div:nth-child(1) {
+      width: 100vw;
+      height: 15vh;
+      border: 1px solid black;
+    }
+    nav > div:nth-child(2) {
+      width: 100vw;
+      height: 40vh;
+      /* border: 1px solid blue; */
+      position: absolute;
+      top: 5vh;
+      display: flex;
+      justify-content: center;
+      /* left: 15vw; */
+    }
+    nav > div:nth-child(2) > div {
+      width: 60vw;
+      height: 40vh;
+      background-color: #c4c4c4;
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      
+    }
+    ul {
+      padding: 3vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <nav>
+      <div></div>
+      <div>
+        <div>
+          <ul class="menu-contain">menu
+            <!-- <li class="items">item-1</li> -->
+          </ul>
+          <ul class="menu-contain">menu
+            <!-- <li class="items">item-2</li> -->
+          </ul>
+          <ul class="menu-contain">menu
+            <!-- <li class="items">item-3</li> -->
+          </ul>
+          <ul class="menu-contain">menu
+            <!-- <li class="items">item-4</li> -->
+          </ul>
+          <ul class="menu-contain">menu
+            <!-- <li class="items">item-5</li> -->
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </nav>
+  </div>
+</body>
+</html>
