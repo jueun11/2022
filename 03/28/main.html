@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root > div {
+      width: 90vw;
+      height: 95vh;
+      /* border: 1px solid black; */
+    }
+    header {
+      width: 90vw;
+      height: 7vh;
+      /* border: 1px solid red; */
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    header > div:nth-child(1) {
+      width: 7vh;
+      height:7vh;
+      border-radius: 50%;
+      background-color: #c4c4c4;
+      display: flex;
+    }
+    header > div:nth-child(2) {
+      width: 75vw;
+      height: 7vh;
+      /* border: 1px solid brown; */
+      position: absolute;
+      right: 0vw;
+      display: flex;
+      align-items: center;
+    }
+    header > div:nth-child(2) > div:nth-child(1) {
+      width: 53vw;
+      height: 5vh;
+      /* border: 1px solid #c4c4c4; */
+      background-color: #c4c4c4;
+      border-radius: 50px;
+      position: absolute;
+      display: flex;
+      right: 8vh;
+    }
+    header > div:nth-child(2) > div:nth-child(2) {
+      width: 5vh;
+      height: 5vh;
+      /* border: 1px solid blueviolet; */
+      position: absolute;
+      display: flex;
+      right: 0;
+      flex-direction: row;
+      flex-direction: column;
+      justify-content:space-between;
+    }
+    header > div:nth-child(2) > div:nth-child(2) > div {
+      width: 5vh;
+      height: 1.2vh;
+      /* border: 1px solid red; */
+      background-color: #c4c4c4;
+      border-radius: 50px;
+      position: relative;
+      flex-direction: column;
+      flex-direction: row;
+      display: flex;
+      
+    }
+
+    main {
+      width: 90vw;
+      height: 65vh;
+      /* border: 1px solid green; */
+      display: flex;
+      flex-direction: column;
+    }
+
+    main > div:nth-child(1) {
+      position: relative;
+      top: 2vh;
+      width: 90vw;
+      height: 60vh;
+      background-color: #c4c4c4;
+      display: flex;
+      justify-content: center;
+    }
+    main > div:nth-child(1) > div {
+      width: 200px;
+      height: 3vh;
+      /* border: 1px solid red; */
+      position: relative;
+      top: 52vh;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+      /* justify-content: space-between; */
+    }
+    main > div:nth-child(1) > div > div {
+      width: 2vh;
+      height: 2vh;
+      border-radius: 25px;
+      background: rgb(214, 214, 214);
+    }
+    main > div:nth-child(1) > div > div:hover {
+      width: 6vh;
+      height: 2vh;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+    main > div:nth-child(2) {
+      position: relative;
+      width: 90vw;
+      height: 6vh;
+      background-color: gray;
+      
+    }
+    footer {
+      width: 90vw;
+      height: 23vh;
+      /* border: 1px solid blue; */
+      display: flex;
+      /* position: relative; */
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    footer > div:nth-child(1) {
+      justify-content: space-between;
+      width: 80vw;
+      /* height: 14vh; */
+      height: 50%;
+      position: relative;
+      display: flex;
+      /* flex-direction: row; */
+      top: 3vh;
+    }
+    footer > div:nth-child(1) > div {
+      display: flex;
+      position: relative;
+      width: 8vh;
+      height: 8vh;
+      background-color: #c4c4c4;
+      /* border: 1px solid green; */
+      border-radius: 10px;
+    }
+    footer > div:nth-child(2) {
+      justify-content: space-between;
+      width: 80vw;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 3vh;
+    }
+    footer > div:nth-child(2) > div {
+      display: flex;
+      position: relative;
+      width: 8vh;
+      height: 8vh;
+      background-color: #c4c4c4;
+      /* border: 1px solid green; */
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div id="root">
+      <div>
+        <header>
+          <div></div>
+          <div>
+            <div></div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+
+          <div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            
+          </div>
+
+          <div>
+            
+          </div>
+        </main>
+
+        <footer>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+</body>
+</html>
