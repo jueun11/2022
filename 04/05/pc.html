@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {padding: 0; margin: 0; box-sizing: border-box;}
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("bg.jpg");
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    #root > div {
+      width: 100vw;
+      height: 60vh;
+      background-color: rgb(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      /* border: 1px solid red; */
+      /* background-color: aliceblue; */
+      width: 80vw;
+      height: 80vh;
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    section > div:nth-child(1) {
+      height: 35vh;
+      /* border: 1px solid red; */
+    }
+    section > div:nth-child(2) {
+      height: 1vh;
+      background-color: rgb(196, 196, 196,0.5);
+      border-radius: 50px;
+    }
+    section > div:nth-child(3) {
+      height: 35vh;
+      /* border: 1px solid blue; */
+    }
+    p {
+      color: rgb(196, 196, 196,0.8);
+      text-align: justify;
+    }
+    #title {
+      display: flex;
+      justify-content: space-between;
+    }
+    #title > div:nth-child(1) {
+      width: 35vh;
+      height: 35vh;
+      background-image: url("abc.png");
+      background-size: cover;
+      border-radius: 25px;
+    }
+
+    #title > div:nth-child(2) {
+      width: 60vw;
+      /* border: 1px solid blue; */
+      /* padding: 0.5vw; */
+    }
+    h1 {
+      margin-top: 12vh;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 2rem;
+      /* border: 1px solid red; */
+    }
+    #title > div:nth-child(2) > div:nth-child(2) {
+      height: 2vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 1px solid red; */
+      margin-top: 5vh;
+    }
+    #title > div:nth-child(2) > div:nth-child(2) > div {
+      width: 10vw;
+      display: flex;
+      /* border: 1px solid green; */
+      margin-left: -15vw;
+      /* 처음에 배경만들때 같이 했어야했다 */
+      justify-content: space-between;
+    }
+    #title > div:nth-child(2) > div:nth-child(2) > div > div {
+      width: 1.5vh;
+      height: 1.5vh;
+      background-color: rgb(128, 128, 128, 0.8);
+      border-radius: 50%;
+    }
+    #title > div:nth-child(2) > div:nth-child(2) > div > div:hover {
+      background-color: rgb(255, 255, 255,0.8);
+    }
+    #title > div:nth-child(2) > div:nth-child(3) {
+      height: 10vh;
+      /* border: 1px solid yellowgreen; */
+      margin-top: 1.5vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+    </div>
+    <section>
+      <div id="title">
+        <div></div>
+        <div>
+          <h1>lorem ipsum</h1>
+          <div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, pariatur!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur et molestias quidem sapiente omnis maiores!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta pariatur asperiores rem laboriosam est beatae inventore expedita quasi quos numquam?</p>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ab, deleniti fugit est atque velit, ratione maiores itaque consectetur aperiam praesentium. Error molestias similique perspiciatis asperiores unde, reprehenderit modi provident ipsa tempora minima itaque quod blanditiis aspernatur a voluptas cum molestiae autem architecto impedit consequatur voluptate doloribus. Perferendis, laborum laboriosam. Animi sunt cum, quod reiciendis delectus expedita corporis saepe recusandae. Odio amet nemo autem earum quaerat incidunt, illum natus laborum ipsa maxime dolor minima eveniet officiis culpa perferendis ea temporibus quibusdam rem itaque. Quasi veniam exercitationem eum doloremque quidem, sint pariatur aspernatur consequuntur, animi harum tempora voluptatum voluptatem porro, veritatis excepturi cumque! Illo minus minima suscipit consequuntur beatae itaque voluptatem vel esse quaerat. Expedita, non? Quia perferendis ex deserunt iusto autem, unde, dicta nisi natus distinctio exercitationem, incidunt facilis corrupti debitis delectus! Et aut quas ullam necessitatibus rem quibusdam quidem harum ipsum ratione vitae fuga officiis error vel voluptas nulla dignissimos quis eveniet, doloribus, blanditiis ipsam modi ad iste rerum ab. Sed, libero aliquam. Ea eligendi amet ducimus deleniti, soluta sunt voluptatem eius corrupti nesciunt a! Expedita, corporis corrupti maiores quasi vero totam. Maxime voluptatum debitis consectetur quae eius ducimus, natus eaque dolore aperiam rem nobis iusto ullam in laborum?</p>
+      </div>
+    </section>
+  </div>
+  
+</body>
+</html>
