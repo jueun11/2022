@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0vw;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root {
+      width: 20vw;
+      height: 85vh;
+      padding: 2vw;
+      border: 1px solid #c4c4c4;
+    }
+    header {
+      padding: 1vw;
+      color: #c4c4c4;
+    }
+    header > h1 {
+      height: 1.5rem;
+    }
+    header > p {
+      height: 4vh;
+    }
+    nav {
+      width: 5vh;
+      height: 5vh;
+      background-color: #c4c4c4;
+    }
+    span {
+      display: flex;
+      width: 20vw;
+      display: flex;
+      justify-content: flex-end;
+      
+    }
+    span > div {
+      width: 3.5vw;
+      display: flex;
+      justify-content: space-between;
+      padding: 1vw;
+
+    }
+    span > div > div {
+      width: 2vh;
+      height: 2vh;
+      background-color: #c4c4c4;
+      border-radius: 50%;
+    }
+    span > div > div:hover {
+      background-color: gray;
+      transition: 1s;
+    }
+    main {
+      width: 20vw;
+      height: 55vh;
+      /* border: 1px solid red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    main > section:nth-child(1) {
+      height: 20vh;
+      border-radius: 25px;
+      background-color: #c4c4c4;
+    }
+    main > section:nth-child(2) {
+      height: 30vh;
+      background-color: #c4c4c4;
+      border-radius: 25px;
+    } 
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header>
+      <nav></nav>
+      <h1>CARD management</h1>
+      <p>Uber Money designed By for Uber</p>
+      <span>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </span>
+    </header>
+    <main>
+      <section></section>
+      <section></section>
+    </main>
+  </div>
+</body>
+</html>
