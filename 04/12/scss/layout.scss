@@ -1,0 +1,76 @@
+* {
+  padding: 0; margin: 0; box-sizing: border-box;
+  list-style: none; 
+  overflow-x: hidden;
+  border: 1px solid black;
+}
+//  클래스
+@mixin color($font, $bg ) {
+  color: $font ;
+  background-color: $bg;
+  // 미리넣어두고 필요없을땐 사용안히기가 안되는듯? none은 사용되는것같다
+}
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+#root {
+  width: 100vw;
+  height: 200vh;
+
+  &>div:nth-child(1) {
+    position: absolute;
+    right: -10vw;
+    top: -20vh;
+  }
+
+  &>div:nth-child(2) {
+    position: absolute;
+    top: 15vh;
+    left: -30vw;
+  }
+  &>#page {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    &>nav {
+      width: 90vw;
+      height: 10vh;
+      border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include color(gray, none );
+
+        &>div:nth-child(1) {
+          width: 10vw;
+          font-weight: bold;
+        }
+
+        &>ul {
+          width: 30vw;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &>main {
+        width: 90vw;
+        margin-top: 30vh;
+        flex-direction: column;
+        @include flex(center,none)
+        }
+  }
+}
+.circle {
+  width: 75vh;
+  height: 75vh;
+  border-radius: 50%;
+  background-color: #ececec;
+  z-index: -1;
+}

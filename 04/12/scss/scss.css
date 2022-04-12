@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root > div {
+  width: 50vw;
+  height: 50vh;
+  background-color: #aaa;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#root > div > section {
+  width: 100px;
+  height: 100px;
+  background-color: #aa2020;
+  border: 1px solid #000;
+}
+#root > div > section:nth-child(2) {
+  width: 200px;
+  background-color: blue;
+}/*# sourceMappingURL=scss.css.map */
