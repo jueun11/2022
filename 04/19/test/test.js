@@ -4,6 +4,7 @@ function sum(a, b) {
   // 함수는 상자라서 열방법이 없다
   return a + b;
   // 반환 = 뱉어낸다
+  // 리턴이 없으면 표시되지 않는다
 }
 
 console.log(sum(9,1));
