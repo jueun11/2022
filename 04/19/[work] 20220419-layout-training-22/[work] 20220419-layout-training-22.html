@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="[work] 20220419-layout-training-22.css">
+</head>
+<body>
+  <div id="root">
+    <div id="shape">
+      <div></div>
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="card-section" >
+      <div id="card-one" class="card-contains">
+        <h1>DON'T<br>DWELL<br>ON<br>THE<br>PAST</h1>
+      </div>
+      <div id="card-two" class="card-contains">
+        <h1>SEIZE<br>THE<br>DAY</h1>
+      </div>
+    </div>
+  </div>
+  <script>
+    const cardOne = document.querySelector('#card-one');
+    cardOne.style.order = 1;
+    const cardTwo = document.querySelector('#card-two');
+    cardTwo.style.order = 2;
+
+    cardOne.addEventListener('click', function() {
+      console.dir(cardOne);
+      cardOne.style.order = 2;
+      cardTwo.style.order = 1;
+    });
+    cardOne.addEventListener('dblclick', function() {
+      console.dir(cardOne);
+      cardOne.style.order = 1;
+      cardTwo.style.order = 2;
+    });
+    // 각 구역에 숫자(임의의 함수)지정하고 클릭했을때 액션이 바뀌도록 함수를 바꿔둔듯
+    // 숫자에 대입해서 숫자로 바꾼다 동작했을때 f12콘솔확인
+    //scss mixin 방식이랑 느낌이 비슷하다
+  </script>
+</body>
+</html>
