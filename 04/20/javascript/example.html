@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">hello</h1>
+
+
+  <script>
+    let a = document.getElementById('title');
+    //자스야 문서에있는 아이디값을 하나 가져오고싶어. 아이디 이름은 title이야
+    //발견했으면 변수에 지정해줄게 . 변수 이름은 a야
+
+    console.dir(a);
+    // 자스야 변수 a가 가르키는 것의 구조좀 보고싶어
+    // dir은 해당 변수의 "구조"만 보는것
+    console.log(a.style);
+    //자스야 내가 구조를 좀 보니까 style이라는 키값이 보였어, 이거뭐야?
+    //태그 뒤에 프로퍼티? 명을 적으면 그부분에 해당하는 프로퍼티가 나온다
+
+    let colorValue = "red";
+    //나 변수 선언할래 선언은 문자열 ~~~야
+    a.style.color = colorValue;
+    if(a.style.color === "red") {
+      //a.style.color가 red라면
+      a.style.color = "rgba(158,158,158,0.3)";
+      //해당 rgba값을 출력한다
+
+      //정리하자면 , 2번째줄(a.style.color(title이라는 id))에 스트링값 red를 넣을것인데, if문으로 a.style.color에 red라는 글씨가 온다면 맨
+      //밑줄의 rgba값이 들어간단 것이다. 이때 ===가 아니라 !==엿으면 성립하지 않았을것
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero dolore molestias perferendis ducimus officiis illo, mollitia animi. Amet officia rerum et nobis optio est quod eum, excepturi minima repellat!
+  </p>
+  <script>
+    let a = document.getElementById('text');
+    //변수 a는 도큐먼트 속 id text이다
+    console.dir(a);
+    //개발자도구에서 이 a라는 변수가 어떤 속성을 가지고있는지 확인. 확인결과 p태그
+    console.log(a.style);
+    //개발자 도구에서 a태그의 스타일을 로그로 본다
+    let fontValue = "1rem"
+    // let fontValue = "red"
+
+    //폰트 크기 변수는 "30px" 이라는 글씨이다
+    a.style.fontSize = fontValue;
+    // a의 폰트 크기는 위의 폰트 사이즈 변수(1rem)이다
+    if(a.style.fontSize === "1rem") {
+    // if(a.style.fontSize === "red") {
+
+    //만약 a styl.fontSize가 "30px"(fontSizeValue)과 일치한다면(위에서 let에서 big은 폰트밸류라햇고, 폰트사이즈는 밸류이니 이건 성립한다)
+
+    a.style.fontSize = "60px";
+    //해당 내용으로 프로퍼티를 정의한다
+      //아까 변수값에 "big"을 넣었더니 작동하지않았다. 단위(해당 속성값? rem과 픽셀은 호환된다)가 통일되어야 작동하는걸까?-o 맞다. css방식상 앞에 태그가 인식할 수 있는 단위만 가능했다.
+    }
+
+    
+
+  </script>
+</body>
+</html>
