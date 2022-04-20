@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+  
+}
+#bg{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 0;
+  &>div:nth-child(1){
+    background-color: #ccc;
+    display: grid;
+    grid-template-columns: 1fr  0.8fr;
+
+    &>:nth-child(1){
+      background-color: #e2e2e2;
+    }
+    &>:nth-child(2){
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      &>h1{
+        position: relative;
+        left: -3vw;
+        // 화면 축소시 가려지지않는다 vw라서 그런가
+      }
+    }
+  }
+  
+  &>div:nth-child(2){
+    background-color: #999999;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+      &>h1{
+        position: relative;
+        left: -3vw;
+      }
+      &>h2{
+        position: absolute;
+        left: 43vw;
+        font-size: 5rem;
+        transform: rotate(270deg);
+        // border: 1px solid red;
+      }
+      &>p{
+        overflow: hidden;
+        position: absolute;
+        left: 42vw;
+        width: 40vw;
+        display: flex;
+        transform: rotate(270deg);
+        font-size: 1.5rem;
+      }
+      &>#p2{
+        text-align: right;
+        transform: rotate(0deg);
+        top: 77vh;
+        left: 18vw;
+      }
+  }
+  
+  &>div:nth-child(3){
+    background-color: #5a5a5a;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+      &>h1{
+        position: relative;
+        left: -3vw;
+      }
+      &>p{
+        font-size: 0.5rem;
+        position: absolute;
+        top: 3vh;
+        right: 3vw;
+      }
+  }
+}
+
+h1{
+  font-size: 25rem;
+}
+
+// 페이지 확대축소시 글씨위치가 상당히 틀어지는데 다른 개선방향이 있나요?

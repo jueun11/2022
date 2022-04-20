@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 0;
+}
+#bg > div:nth-child(1) {
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+}
+#bg > div:nth-child(1) > :nth-child(1) {
+  background-color: #e2e2e2;
+}
+#bg > div:nth-child(1) > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#bg > div:nth-child(1) > :nth-child(2) > h1 {
+  position: relative;
+  left: -3vw;
+}
+#bg > div:nth-child(2) {
+  background-color: #999999;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#bg > div:nth-child(2) > h1 {
+  position: relative;
+  left: -3vw;
+}
+#bg > div:nth-child(2) > h2 {
+  position: absolute;
+  left: 43vw;
+  font-size: 5rem;
+  transform: rotate(270deg);
+}
+#bg > div:nth-child(2) > p {
+  overflow: hidden;
+  position: absolute;
+  left: 42vw;
+  width: 40vw;
+  display: flex;
+  transform: rotate(270deg);
+  font-size: 1.5rem;
+}
+#bg > div:nth-child(2) > #p2 {
+  text-align: right;
+  transform: rotate(0deg);
+  top: 77vh;
+  left: 18vw;
+}
+#bg > div:nth-child(3) {
+  background-color: #5a5a5a;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#bg > div:nth-child(3) > h1 {
+  position: relative;
+  left: -3vw;
+}
+#bg > div:nth-child(3) > p {
+  font-size: 0.5rem;
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+}
+
+h1 {
+  font-size: 25rem;
+}/*# sourceMappingURL=[work] 20220420-layout-training-23.css.map */
