@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+    
+  </div>
+
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    // body태그의 스타일.패딩을 0으로 설정
+    document.body.style.margin = "0";
+    // body태그의 스타일중 마진값을 0으로 설정
+    let root = document.getElementById("root");
+    // root이라는 변수를 선언하는데, root(변수)는 문서에 있는 id ,,#root이다...const는 상수를 의미
+    let widthValue = 100;
+    // widthValue라는 변수는 100이라는 숫자이다. 숫자로사용해야 하기에 ""같은건 안쓴다
+    let heightValue = 100;
+    // 위의 내용과 동일, 높이값이라는 차이
+    root.style.width = `${widthValue}vw`;
+    // root(도큐먼트에서 찾아낸 #root)의 style태그 아래 width값을 바꾼다. 위의 변수는 단순한 숫자이기에 vw라는 단위를 따로 입력해준다. 
+    root.style.height = `${heightValue}vh`;
+    // 위와 동일, 높이라는 차이 vh
+    root.style.backgroundColor = "darkblue";
+    // 배경색을 css를 통하지않고 바꿔준다. darkblue는 무언가 단위가 필요한게 아니기에 ""에 그대로써준다
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // 새 변수(backgroundColorArray)를 설정해준다. 이때 변수이름을 변수내용과 관련있게하여 가독성을 높인다
+    let setSwitch = 0;
+    // if를 사용하기위한 임의의 변수 설정
+    root.addEventListener("click", function() {
+      // root에 이벤트를 준다. 이때 이벤트는 클릭햇을때 발동한다는 조건..이벤트는 무언가 일어난다는 것으로 이해하면 된다
+      if(setSwitch === 0) {
+        // 만약 set switch의 값이 0과 일치하면
+        root.style.backgroundColor = backgroundColorArray[1];
+        // 변수이름 root의 백그라운드 컬러를 backgroundColorArray의 1번째 색을 넣어준다..이때 배열은 0부터 시작하기에 1은 #333333이다.
+        setSwitch = 1;
+        // 그리고 setSwitch의 값을 1로 변화시킨다. 이제까지는 ture엿지만, 값을 변화시켰기에 이후 불일치로 바뀌게 된다
+      } else {
+        // 일치하지않을 경우
+        root.style.backgroundColor = backgroundColorArray[0];
+        // #root의 style에 포함되는 백그라운드 컬러를 backgroundColorArray의 0번째 색 #ff0000으로 바꾼다. 아까 클릭으로 불일치하게 되었으니, 이 값이 보여지게된다
+        setSwitch = 0;
+        // 불일치할 경우 다음에는 일치하게 되도록 setSwitch값을 0으로 돌려준다
+        //이러한 방식으로 처음 a색상이후 이벤트(조건 클릭)이 있을때 b(일치)..c(불일치) b c b c ..반복하게된다
+      }
+
+    });
+
+
+
+
+    
+
+
+  </script>
+</body>
+</html>
