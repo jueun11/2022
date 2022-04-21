@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: salmon;
+    } */
+  </style>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    // getElementById)() 인수 (argument)로 문자열로만 받는 규칙이 들어있다
+
+    let millon = 100;
+// millon은 100이라는 숫자이다
+    root.style.width = millon + "vw";
+    //숫자만 있기때문에 글씨인 vw를 붙여줘야 100vw가 된다
+    root.style.height = millon + "vh";
+    root.style.backgroundColor = "salmon";
+    //salmon은 그것만으로도 효력이 있다
+    
+    console.dir(root);
+
+    const member = ["김주은","홍길동","박감자","최마토"];
+    //순서를 이용해서 무언가를 해야하기에 배열로 사용한다
+    let count = 0;
+    // 배열에 연산작용을 활용해야해서 따로 정의해둔다 (카운트라는 변수에 0이라는 값)
+    root.addEventListener("click", function() {
+      // 이벤트는 무언가의 작용을 말하는 것이다. 클릭이라는 활동이 있으면 작동한다는 의미
+      let result = millon *2;
+      // result의 값을 이전에 정의해둔 100의 변수 *2로 정의
+      root.style.width = result + "vw";
+      root.style.height = result + "vh";
+      // 이 역시 vw와 같은 단위가 없기에 따로 붙여준다
+      root.style.backgroundColor = "darkgray";
+      root.textContent = member[count] + "님 반갑습니다";
+      // 새로운 변수 정의. textContent는 맴버[함수0]함수[함수] + "님 반갑습니다"라는 텍스트이다
+      count = count+1;
+      //count는 count값에 +1을 해주는 것이다.
+      //클릭할때마다 이러니까 계속 숫자가 커짐(배열값이 계속 커짐)
+      if (count > member.length-1) {
+        count = 0;
+        //마지막까지 표기된 이후에는 제대로 표기되지않기에 마지막을 갔을때 다시 되돌아가도록 설정한다
+        //되돌아 간 이후에는 다시 위의 +1작용.. 그러다가 맥스-1이 되면 다시 돌아감반복
+      }
+    })
+
+    
+    // 클릭하고 팝업뜨는거 이런식으로 만듬 내 컨텐츠에선 그 아이디비번입력창 활용
+    
+
+
+    // const data = document.querySelector("#root");
+
+    // console.log(root);
+    // console.log(data);
+
+  </script>
+</body>
+</html>
