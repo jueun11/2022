@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+  
+
+  <script>
+    const root = document.getElementById("root");
+    console.dir(root);
+    console.log(root.children);
+    console.log(root.children[0]);
+    console.dir(root.children[0]);
+    //이거 어차피 문자열 꾸러미인데 그냥 하나의 변수에다가 저장하면 안돼?
+    
+    
+    document.body.style.width = "100vw"
+    document.body.style.height = "100vh"
+    document.body.style.backgroundColor ="salmon";
+    const textArray = ["피곤하다", "내일은 토요일이다","쉬고싶다"];
+    
+    //알고리즘 구상 문서를 클릭할때마다 텐스트가 바뀌었으면 좋겠어
+    //1 텍스트목록이 필요할거 같네?
+    //2. 목록은 배열이 순서대로 쓴다던데
+    //3. 잠깐만 순서는 숫자니까 더하기 1만 시키면되겠네?
+    //4. 어라? 숫자는 어떻게 덧셈시키지?
+    //5. 숫자변수하나 만들어야겠네
+    let indexValue = 0;
+    let changeText = textArray[1];
+    root.children[0].textContent = textArray[indexValue]
+    document.body.addEventListener('click',function
+    (){
+      if (root.children[0].textContent === "") {
+        root.children[0].textContent = textArray[0]
+        ;
+      } else {
+        // root.children[0].textContent = textArray[1]
+        indexValue++;
+        root.children[0].textContent = textArray[indexValue]
+        //오우ㅜ쉣 해결햇다반복완료 []안에 함수넣으니까 되네
+        console.log(indexValue);
+      }
+      if(indexValue === textArray.length){
+        indexValue=0;
+      }
+      root.children[0].textContent = textArray[indexValue]
+      //문서의 바디부분을 클릭하면두번째 인수로 자리 잡혀있는 함수 내용을 실행시켜줘
+      //함수내용이 뭐냐면 사람들이 s이걸 알고리즘이라 하더라 모르겟고
+      //root에 있는 자식에 0번째가 있을거거든 거기도 태그, 그중  text node 키에 변수
+      //문자열 "재할당해줘";
+      // document.body.addEventListener('chick', function())
+    })
+    //아무튼 해결함 변수 선언은 어떤걸 먼저 쓰냐가 정말 중요한것 같다. 순서가 안맞으면 정의되지 않은 것을
+    //사용한게 되서 오류남ㄷㄷㄷ
+    
+  </script>
+
+</body>
+</html>
