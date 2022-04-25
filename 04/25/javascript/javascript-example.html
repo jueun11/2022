@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+    }
+
+    #root>div{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #cccc;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>1</div>
+    <div>2</div>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    const one = root.children[0];
+    //text node에 문자열 1이라고 써놓은 놈이구나
+    const two = root.children[1];
+    //text node에 문자열 2라고 써놓은 놈이구나
+    const test = document.querySelector('#root>div:nth-child(2)');
+    console.log(root);
+    console.dir(root);
+    console.dir(root.children[0]);
+    console.log(typeof two.textContent);
+    console.dir(one);
+
+    //event : '무슨 일이 일아났다'
+
+    one.addEventListener('wheel', function() {
+      //one에 해당하는 곳에서 휠을 해야 작동한다
+      two.style.transition = "1s"; 
+      //1초걸림
+      two.textContent= "클릭";
+      two.style.backgroundColor = "#ff6666";
+      two.style.width = "200px";
+      console.log(two.style.backgroundColor);
+
+      if(two.style.backgroundColor === "rgb(255, 102, 102)") {
+        two.style.backgroundColor = "blue";
+      }
+
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    let root = document.getElementById("root");
+    let box_1 = root.children[0];
+    let box_2 = root.children[1];
+    let box_3 = root.children[2];
+    console.dir(root);
+    console.dir(box_1);
+    console.dir(box_2);
+    console.dir(box_3);
+
+    root.style.display = "grid";
+    root.style.gridTemplateRows = "250px";
+    root.style.gridTemplateColumns = "250px 250px 250px";
+    root.style.gap= "3vw";
+
+
+    box_1.style.backgroundColor = "#ccc";
+    box_2.style.backgroundColor = "#ccc";
+    box_3.style.backgroundColor = "#ccc";
+
+    document.body.style.width = "100vw";
+    document.body.style.height = "100vh";
+    document.body.style.padding = "0";
+    document.body.style.margin = "0";
+    document.body.style.display = "flex";
+    document.body.style.justifyContent = "center";
+    document.body.style.alignItems = "center";
+
+  </script>
+</body>
+</html>
