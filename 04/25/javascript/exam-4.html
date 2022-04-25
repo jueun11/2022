@@ -754,9 +754,10 @@
       // index++;
       if(setSwitch ===0) {
         for(let i = 0; i< target.length; i++){
-          target[i].style.color = 'white';
-          target[i].style.display = "flex";  
+          // target[i].style.color = 'white';
+          target[i].style.display = "none";  
           //숨기는 법을 모르겠다
+          //해결 디스플레이 none이 이거였다
           // target[i].style.flexDirection = "rows";  
 
             // if(target[i].textContent === "items-583"){
@@ -768,7 +769,9 @@
           setSwitch = 1;
         } else {
           for(let i = 0; i< target.length; i++){
-          target[i].style.color = 'black';
+          target[i].style.display = "flex";  
+          //다시 나타나게 해야함
+          //이걸 응용한다면 팝업창도 만들 수 있지않을까..
             
             if(target[i].textContent === "items-583"){
               //이 조건에 부합하면
@@ -777,6 +780,7 @@
             }
           }
           setSwitch = 0;
+          //다시 돌아갈 수 있게 0
         }
     });
   </script>
