@@ -26,13 +26,13 @@
     root.style.width = "100vw";
     root.style.height = "100vh";
     console.dir(root);
-    
     root.style.display = "flex";
     root.style.justifyContent = "center";
     root.style.flexDirection = "column";
+    //root의 크기를 정해줘야 display정렬방식을 사용할 수 있다
+
     let one = document.getElementById("one");
     console.dir(one);
-    one.style.display = "flex";
     let one_1 = one.children[0];
     console.dir(one_1);
     let one_2 = one.children[1];
@@ -40,17 +40,20 @@
     let two = document.getElementById("two");
     let two_1 = two.children[0];
     console.dir(two);
-
+    //일일히 찾을 필요가 없게 알아보기 쉬운말로 변수를 만들어준다
     let widthValue = 250;
     let heightValue = 250;
-//이거 *2 로 긴 박스들 사이즈 정해주기. 숫자로 작용해야하기에 ""사용하지 않는다
-    one.style.marginLeft = "20vw";
+    //이거 *2 로 긴 박스들 사이즈 정해주기. 숫자로 작용해야하기에 ""사용하지 않는다
 
+    one.style.marginLeft = "20vw";
+    one.style.display = "flex";
+    //flex로 해야 밑으로 안가고 옆에 붙는다
     one_1.style.width = `${widthValue}px`;
     one_1.style.height = `${heightValue}px`;
     one_1.style.backgroundColor = "#c4c4c4";
     one_1.style.marginRight = "3vh";
-
+    //제일 작은 박스 스타일링, 아까 지정한 크기 변수 활용
+    //각 박스끼리의 간격이 있어 마진값을 주었다
     one_2.style.width = `${widthValue*2}px`;
     one_2.style.height = `${heightValue}px`;
     one_2.style.backgroundColor = "#999999";
