@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button>click</button>
+  </div>
+
+  <script>
+    // const text = document.querySelector('#root > button');
+    //편한거로 쓰면되는데 , 자식방식을 권장한다
+
+    
+    
+    const root = document.getElementById("root");
+    const clickBtn = root.children[0];
+    console.dir(root);
+    console.log(root);
+
+    let bgColorValue = 333;
+    let text = clickBtn.textContent;
+    console.dir(clickBtn);
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.backgroundColor = `#${bgColorValue}`;   
+    document.body.style.margin ="0"; 
+    clickBtn.textContent ="dark";
+    clickBtn.style.width = "5vw";
+    clickBtn.style.height = "5vh";
+    clickBtn.style.border = "none";
+    clickBtn.style.borderRadius = "50%";
+    clickBtn.style.margin = "5vh";
+    clickBtn.style.fontSize = "1rem";
+    clickBtn.style.color = "black";
+
+    
+    let data = true;
+    clickBtn.addEventListener('click', function(){
+      //console.log(root.style.backgroundColor);
+      if (data === true){
+        console.log('data 값은 :' + data);
+        data = false;
+        root.style.backgroundColor = "salmon";
+        clickBtn.textContent ="light";
+        clickBtn.style.width = "20vw";
+        clickBtn.style.height = "20vh";
+        root.style.transition = "1s";
+        clickBtn.style.transition = "1s";
+        clickBtn.style.fontSize = "4rem";
+        clickBtn.style.color = "salmon";
+
+        clickBtn.style.backgroundColor = "rgb(255,255,255,0.7)";
+
+      } else { //데이터가 true와 같지 않으면 else data !== true, data === false
+        console.log("지금 else로 data 값은: " + data);
+        data = true;
+        root.style.backgroundColor = `#${bgColorValue}`;
+        root.style.transition = "1s";
+        clickBtn.style.width = "5vw";
+        clickBtn.style.height = "5vh";
+        clickBtn.textContent ="dark";
+        clickBtn.style.fontSize = "1rem";
+        clickBtn.style.color = "black";
+
+        clickBtn.style.backgroundColor = "rgb(255,255,255)";
+
+        clickBtn.style.transition = "1s";
+
+
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+
+    const a = document.querySelector("#root");
+    
+    
+    let value = 100; //변수로 꺼냈다
+    let colotValue = 333;
+
+    a.style.width = value+"vw";
+    a.style.height = `${value}vh`;
+    a.style.backgroundColor = `#${colotValue}`;
+    
+    a.addEventListener("click", function(){
+      let result;
+      console.log("result 연산이 시작되기 전 : + value : 이값이다.");
+      result = value / 2;
+      a.style.width = result+ "vw";
+      a.style.height = result+ "vh";
+
+      value = result;
+      console.log("리절트 값을 밸류 변수에 대입시키고 난 후의 밸류값" + value)
+      //같은게 아니라 대입이다. 50이 된 result를 다시 밸류에 넣는것
+    })
+  </script>
+</body>
+</html>
