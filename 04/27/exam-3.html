@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hello java</h1>
+
+  <script>
+    
+    let h1 = document.querySelector("h1");
+    console.log(h1);
+    let fontsize = 25
+    h1.style.fontSize = `${fontsize}px`;
+
+    h1.addEventListener("click",function(){
+      h1.style.fontSize = `${fontsize}px`
+      //h1을 클릭하면
+      //하나씩 높여주는걸 넣는다
+      fontsize++
+    })    
+  </script>
+</body>
+</html>
