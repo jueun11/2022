@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #container>div:nth-child(1){
+      width: 25vw;
+      height: 25vw;
+      position: absolute;
+      left: 30vw;
+      top: 15vh;
+      background-color: #aa2020;
+      z-index: 1;
+    }
+    #container>div:nth-child(2){
+      width: 25vw;
+      height: 25vw;
+      position: absolute;
+      left: 40vw;
+      top: 30vh;
+      background-color: #ffe08b;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

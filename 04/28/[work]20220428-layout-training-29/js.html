@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+
+    let container = document.getElementById("container");
+    console.log(container);
+
+    container.style.width = "100vw";
+    container.style.height = "100vh";
+
+    let one = container.children[0];
+    let two = container.children[1];
+    
+    one.style.width = "25vw";
+    one.style.height = "25vw";
+    one.style.position = "absolute";
+    one.style.backgroundColor = "#aa2020";
+    one.style.left = "30vw";
+    one.style.top = "15vh";
+    one.style.zIndex = "1";
+
+    two.style.width = "25vw";
+    two.style.height = "25vw";
+    two.style.position = "absolute";
+    two.style.backgroundColor = "#ffe08b";
+    two.style.left = "40vw";
+    two.style.top = "30vh";
+    two.style.zIndex = "2";
+
+    console.log(one);
+    console.dir(one);
+
+    one.addEventListener("click",function(){
+      one.style.zIndex = "2";
+      two.style.zIndex = "1";
+    })
+
+    two.addEventListener("click",function(){
+      one.style.zIndex = "1";
+      two.style.zIndex = "2";
+    })
+  </script>
+</body>
+</html>
