@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-size: contain;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#banner {
+  margin-top: 10vh;
+  width: 90vw;
+  height: 20vh;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+
+article {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+article > h2 {
+  width: 90vw;
+}
+article > div:nth-child(2) {
+  width: 100vw;
+  display: flex;
+  margin-top: 1.5vh;
+  margin-left: 10vw;
+}
+article > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  width: 60vw;
+  height: 20vh;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+article > div:nth-child(2) > div:nth-child(1) > p {
+  margin-top: 1.5vh;
+}
+article > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) {
+  height: 3vh;
+  border: 1px solid saddlebrown;
+}
+article > div:nth-child(2) > div:nth-child(2) {
+  margin-left: 5vw;
+}
+article > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  width: 60vw;
+  height: 20vh;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+article > div:nth-child(2) > div:nth-child(2) > p {
+  margin-top: 1.5vh;
+}
+article > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+  height: 3vh;
+  border: 1px solid saddlebrown;
+}
+
+#banner-2 {
+  margin-top: 3vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+}
+#banner-2 > div:nth-child(1) {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+#banner-2 > div:nth-child(2) {
+  margin-left: 2vw;
+}
+.bar {
+  width: 100vw;
+  margin-top: 5vh;
+}
+
+section {
+  width: 90vw;
+  margin-top: 5vh;
+  z-index: -1;
+}
+section > div:nth-child(2) {
+  margin-top: 3vh;
+}
+
+#one {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+}
+#one > div:nth-child(1) > p {
+  width: 40vw;
+}
+#one > div:nth-child(2) > p {
+  width: 40vw;
+}
+
+.poto {
+  width: 40vw;
+  height: 40vw;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+
+#two {
+  margin-top: 3vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+#two > div:nth-child(1) > p {
+  width: 40vw;
+}
+#two > div:nth-child(2) > p {
+  width: 40vw;
+}
+
+#ad-1 {
+  margin-top: 7vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+#ad-2 {
+  margin-top: 3vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13vh;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,58 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > div:nth-child(1) {
+  height: 50vh;
+  width: 100vw;
+  background-color: #727272;
+}
+main > div:nth-child(2) {
+  width: 100vw;
+  background-color: #fff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: absolute;
+  top: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  width: 30vw;
+  height: 7vh;
+  background-color: #c4c4c4;
+  margin-top: 5vh;
+}
+
+#share {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  position: absolute;
+  top: 5vh;
+  left: 80vw;
+}
+
+#information {
+  width: 70vw;
+  height: 10vh;
+  background-color: #c4c4c4;
+  margin-top: 3vh;
+}
+
+#menu {
+  width: 100vw;
+  height: 5vh;
+  background-color: #c4c4c4;
+  margin-top: 5vh;
+}
+
+#nutritionfacts {
+  width: 100vw;
+  height: 25vh;
+  background-color: #838383;
+  margin-bottom: 5vh;
+}/*# sourceMappingURL=page-2.css.map */

@@ -1,0 +1,169 @@
+#root {
+  overflow: hidden;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+h3 {
+  color: var(--color-2);
+}
+
+p {
+  color: var(--color-3);
+}
+
+#filter {
+  width: 95vw;
+  height: 4vh;
+  margin-top: 25vh;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  position: absolute;
+  left: 5vw;
+  display: flex;
+  overflow: hidden;
+}
+#filter > div:nth-child(1) {
+  width: 15vw;
+  height: 4vh;
+  border-radius: 25px;
+  background-color: var(--color-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#filter > div:nth-child(1) > div {
+  width: 3vh;
+  height: 3vh;
+  background-color: var(--color-5);
+}
+#filter > div:nth-child(2) {
+  width: 20vw;
+  height: 4vh;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-1);
+  margin-left: 2vw;
+}
+#filter > div:nth-child(3) {
+  width: 25vw;
+  height: 4vh;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-1);
+  margin-left: 2vw;
+}
+#filter > div:nth-child(4) {
+  width: 20vw;
+  height: 4vh;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-1);
+  margin-left: 2vw;
+}
+#filter > div:nth-child(5) {
+  position: absolute;
+  width: 25vw;
+  height: 4vh;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-1);
+  margin-left: 2vw;
+  left: 86vw;
+}
+
+#container {
+  margin-top: 35vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+#container > div:nth-child(1) {
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+}
+#container > div:nth-child(1) > div {
+  width: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#container > div:nth-child(1) > div > div {
+  width: 2vh;
+  height: 2vh;
+  background-color: var(--color-2);
+}
+
+section {
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  width: 90vw;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  gap: 10vw;
+}
+section > div > div:nth-child(1) {
+  width: 40vw;
+  height: 40vw;
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 3vw;
+  display: flex;
+  justify-content: flex-end;
+}
+section > div > div:nth-child(1) > div {
+  width: 3vh;
+  height: 3vh;
+  background-color: #fff;
+}
+section > div > div:nth-child(2) {
+  margin-top: 1vh;
+}
+section > div > div:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+  margin-top: 2vh;
+}
+section > div > div:nth-child(3) > div:nth-child(1) {
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section > div > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) {
+  width: 2vh;
+  height: 2vh;
+  background-color: var(--color-4);
+}
+section > div > div:nth-child(3) > div:nth-child(2) {
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2vw;
+}
+section > div > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) {
+  width: 2vh;
+  height: 2vh;
+  background-color: var(--color-4);
+}/*# sourceMappingURL=list.css.map */

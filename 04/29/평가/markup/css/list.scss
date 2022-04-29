@@ -1,0 +1,183 @@
+*{
+}
+#root{
+  overflow: hidden;
+}
+main{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+}
+h3{
+  color: var(--color-2);
+}
+p{
+  color: var(--color-3);
+}
+#filter {
+  width: 95vw;
+  height: 4vh;
+  margin-top: 25vh;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  position:absolute;
+  left: 5vw;
+  display: flex;
+  // border: 1px solid red;
+  // background-color: #c4c4c4;
+  overflow: hidden;
+  &>div:nth-child(1){
+    width: 15vw;
+    height: 4vh;
+    border-radius: 25px;
+    background-color:var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &>div{
+      width: 3vh;
+      height: 3vh;
+      background-color:var(--color-5);
+    }
+  }
+  &>div:nth-child(2){
+    width: 20vw;
+    height: 4vh;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-1);
+    margin-left: 2vw;
+  }
+  &>div:nth-child(3){
+    width: 25vw;
+    height: 4vh;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-1);
+    margin-left: 2vw;
+  }
+  &>div:nth-child(4){
+    width: 20vw;
+    height: 4vh;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-1);
+    margin-left: 2vw;
+  }
+  &>div:nth-child(5){
+    position: absolute;
+    width: 25vw;
+    height: 4vh;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-1);
+    margin-left: 2vw;
+    left: 86vw;
+  }
+}
+#container{
+  margin-top: 35vh;
+  width: 90vw;
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  &>div:nth-child(1){
+    width: 90vw;
+    display: flex;
+    justify-content: flex-end;
+    // border: 1px solid rebeccapurple;
+    &>div{
+      // border: 1px solid red;
+      width: 16vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &>div{
+        width: 2vh;
+        height: 2vh;
+        background-color: var(--color-2);
+      }
+    }
+  }
+}
+section{
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  width: 90vw;
+  justify-content: center;
+  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  gap: 10vw;
+  // grid-template-rows: 30vh 30vh;
+  &>div{
+    // border: 1px solid blue;
+    &>div:nth-child(1){
+      // 사진
+      width: 40vw;
+      height: 40vw;
+      background-color: #ccc;
+      border-radius: 5px;
+      padding: 3vw;
+      display: flex;
+      justify-content: flex-end;
+      &>div{
+        // 하트아이콘
+        width: 3vh;
+        height: 3vh;
+        background-color: #fff;
+      }
+    }
+    &>div:nth-child(2){
+      // 설명
+      margin-top: 1vh;
+    }
+    &>div:nth-child(3){
+      //조횟수와 별점
+      // border: 1px solid red;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.7rem;
+      margin-top: 2vh;
+      &>div:nth-child(1){
+        width: 10vw;
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &>div:nth-child(1){
+          width: 2vh;
+          height: 2vh;
+          background-color: var(--color-4);
+        }
+      }
+      &>div:nth-child(2){
+        width: 10vw;
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 2vw;
+        &>div:nth-child(1){
+          width: 2vh;
+          height: 2vh;
+          background-color: var(--color-4);
+        }
+      }
+    }
+  }
+}

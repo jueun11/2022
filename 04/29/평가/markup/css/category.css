@@ -1,0 +1,20 @@
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  margin-top: 25vh;
+  display: grid;
+  gap: 5vw;
+  grid-template-rows: 13vh 13vh 13vh 13vh;
+  grid-template-columns: 13vh 13vh 13vh;
+}
+section > div {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+}
+section > div:hover {
+  background: gray;
+}/*# sourceMappingURL=category.css.map */

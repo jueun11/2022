@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1:#47D184;
+  --color-2:#DC0D28;
+  --color-3:#fff;
+  --color-4:#000;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/fruit-project/markup/img/orangecocktail.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+#root > div {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+p {
+  font-size: 0.7rem;
+  color: var(--color-3);
+  font-weight: 100;
+}
+
+header {
+  margin-top: 40vh;
+  width: 80vw;
+}
+header > h1 {
+  color: white;
+}
+header > h1 > span:nth-child(1) {
+  color: var(--color-1);
+}
+header > h1 > span:nth-child(2) {
+  color: var(--color-2);
+}
+header > p {
+  white-space: nowrap;
+  margin-top: 1vh;
+  line-height: 1.2rem;
+  letter-spacing: -0.02rem;
+}
+
+main {
+  margin-top: 5vh;
+}
+main > div:nth-child(1) {
+  width: 80vw;
+  height: 7vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > div:nth-child(1) > h2 {
+  color: var(--color-1);
+  letter-spacing: 0.4rem;
+  font-size: 1.3rem;
+}
+main > div:nth-child(2) {
+  margin-top: 3vh;
+  width: 80vw;
+  height: 7vh;
+  background-color: rgba(71, 209, 132, 0.8);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > div:nth-child(2) > h2 {
+  color: var(--color-3);
+  letter-spacing: 0.4rem;
+  font-size: 1.3rem;
+}
+
+.line::before {
+  content: "";
+  flex-grow: 1;
+  /* margin: 0vw 3vw; */
+  background-color: #c4c4c4;
+  height: 1px;
+}
+
+.line::after {
+  content: "";
+  flex-grow: 1;
+  /* margin: 0vw 3vw; */
+  background-color: #c4c4c4;
+  height: 1px;
+}
+
+.line > p {
+  margin: 2vw;
+}
+
+.line {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  align-items: center;
+}
+.line > p {
+  font-size: 0.7rem;
+}/*# sourceMappingURL=login-1.css.map */

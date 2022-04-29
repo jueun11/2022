@@ -1,0 +1,69 @@
+.bar {
+  width: 100vw;
+  margin: 5vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ranking-recipe {
+  margin-top: 10vh;
+  width: 100vw;
+  height: 30vh;
+  background-color: #ccc;
+}
+
+#ranking-user {
+  width: 90vw;
+  height: 25vh;
+  background-color: #ccc;
+  margin-top: 5vh;
+}
+
+#myrecipe {
+  width: 90vw;
+  height: 8vh;
+  background-color: #ccc;
+  margin-top: 5vh;
+  border-radius: 5px;
+}
+
+#best {
+  width: 90vw;
+  height: 50vh;
+  margin-top: 5vh;
+  background-color: #ccc;
+}
+
+#new {
+  width: 90vw;
+  height: 50vh;
+  margin-top: 5vh;
+  background-color: #ccc;
+}
+
+#ad-1 {
+  margin-top: 7vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+#ad-2 {
+  margin-top: 3vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13vh;
+}/*# sourceMappingURL=community.css.map */

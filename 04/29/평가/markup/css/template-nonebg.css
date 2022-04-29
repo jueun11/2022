@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow: hidden;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  border: 1px solid red;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  padding: 5vw;
+}
+header > div {
+  width: 70vw;
+  border: 1px solid rebeccapurple;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+header > div > div:nth-child(1) {
+  width: 5vh;
+  height: 5vh;
+  background-color: #c4c4c4;
+}
+header > div > h1 {
+  margin-left: 2vw;
+}
+header > nav {
+  width: 25vw;
+  height: 5vh;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+}
+header > nav > div:nth-child(1) {
+  width: 5vh;
+  height: 5vh;
+  background-color: #c4c4c4;
+}
+header > nav > div:nth-child(2) {
+  width: 5vh;
+  height: 5vh;
+  background-color: #c4c4c4;
+}
+
+footer {
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0vh 0vh 1vh rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  background-color: #fff;
+}
+
+main {
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #c4c4c4;
+}
+
+h3 {
+  font-size: 0.8rem;
+  color: #c4c4c4;
+}
+
+p {
+  font-size: 0.7rem;
+  color: #c4c4c4;
+}
+
+.bar {
+  width: 100vw;
+  height: 2vh;
+  background-color: #c4c4c4;
+}/*# sourceMappingURL=template-nonebg.css.map */

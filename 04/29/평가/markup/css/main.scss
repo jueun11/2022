@@ -1,0 +1,186 @@
+*{
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+#root{
+  background-size: contain;
+}
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#banner {
+  margin-top: 10vh;
+  width: 90vw;
+  height: 20vh;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+
+article{
+  // border: 1px solid red;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  &>h2{
+    
+    width: 90vw;
+  }
+  &>div:nth-child(2){
+    // border: 1px solid blueviolet;
+    width: 100vw;
+    display: flex;
+    margin-top: 1.5vh;
+    margin-left: 10vw;
+
+    //글 밑 사진과 글 영역 시작
+    &>div:nth-child(1){
+      //첫번째 사진과 설명
+      // border: 1px solid brown;
+      &>div:nth-child(1){
+        width: 60vw;
+        height: 20vh;
+        background-color: #c4c4c4;
+        border-radius: 15px;
+        //사진
+      }
+      &>p{
+        margin-top: 1.5vh;
+      }
+      &>div:nth-child(3){
+        height: 3vh;
+        border: 1px solid saddlebrown;
+      }
+    }
+    &>div:nth-child(2){
+      margin-left: 5vw;
+
+      //두번째 사진과 설명
+      &>div:nth-child(1){
+        //사진
+        width: 60vw;
+        height: 20vh;
+        background-color: #c4c4c4;
+        border-radius: 15px;
+        //튀어나오는거 때문인지, template으로 만들어둔 상하단 바가 고정되지않음
+        //해결. 템플릿 내에서 root에 오버플로우 히든줌
+      }
+      &>p{
+        margin-top: 1.5vh;
+
+      }
+      &>div:nth-child(3){
+        height: 3vh;
+        border: 1px solid saddlebrown;
+      }
+    }
+  }
+}
+
+#banner-2{
+  margin-top: 3vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  &>div:nth-child(1) {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+  }
+  &>div:nth-child(2) {
+    // border: 1px solid red;
+    margin-left: 2vw;
+    &>h3{
+
+    }
+  }
+}
+
+.bar {
+  width: 100vw;
+  margin-top: 5vh;
+}
+
+section {
+  width: 90vw;
+  margin-top: 5vh;
+  // border: 1px solid red;
+  z-index: -1;
+  &>div:nth-child(2){
+    margin-top: 3vh;
+  }
+}
+#one{
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  &>div:nth-child(1){
+
+
+    &>p{
+      width: 40vw;
+    }
+  }
+  &>div:nth-child(2){
+    &>p{
+      width: 40vw;
+    }
+  }
+}
+.poto {
+  width: 40vw;
+  height: 40vw;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+#two{
+  margin-top: 3vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  &>div:nth-child(1){
+
+
+    &>p{
+      width: 40vw;
+    }
+  }
+  &>div:nth-child(2){
+    &>p{
+      width: 40vw;
+    }
+  }
+}
+
+#ad-1{
+  margin-top: 7vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+}
+#ad-2{
+  margin-top: 3vh;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13vh;
+}

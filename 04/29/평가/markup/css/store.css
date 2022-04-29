@@ -1,0 +1,39 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#banner {
+  margin-top: 10vh;
+  width: 90vw;
+  height: 20vh;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+}
+
+#category {
+  width: 90vw;
+  height: 12vh;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-top: 5vh;
+}
+
+#discount {
+  margin-top: 7vh;
+  width: 90vw;
+  height: 25vh;
+  background-color: #ccc;
+}
+
+.bar {
+  width: 100vw;
+  margin: 5vh;
+}
+
+#recommend {
+  width: 90vw;
+  height: 25vh;
+  background-color: #ccc;
+}/*# sourceMappingURL=store.css.map */
