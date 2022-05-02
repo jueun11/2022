@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+  <script>
+    const root = document.getElementById("root");
+    let nemo = root.children[0];
+    console.log(nemo);
+    nemo.style.backgroundColor = "red";
+    nemo.style.width = "30vw";
+    nemo.style.height = "30vw";
+
+
+    arr = 0;
+
+
+    // 무언가 반복해서 와리가리치려면 arr같이 따로 정의를해주고
+    //그 값을 응용해서 알고리즘을 짜야한다
+    nemo.addEventListener("click", function(){
+      if(arr === 0 ){
+        nemo.style.backgroundColor = "black";
+        arr = 1;
+        console.log("바꾼상태");
+
+      } else {
+        nemo.style.backgroundColor = "red";
+        arr = 0;
+        console.log("원래상태");
+      }
+    })
+  </script>
+</body>
+</html>
