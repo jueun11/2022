@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    document.body.style.padding = 0;
+    document.body.style.margin = 0;
+    //스타일 정의...걍 전체 마진패딩 없애는거
+    const root = document.getElementById("root");
+    //#root은 상수 root
+    let sectionArr = ["피카츄", "라이츄", "파이리", "꼬부기"];
+    //배열 변수만들기 sectionArr은 이하 배열을 가지고있다.
+    let sectionColor = ["salmon", "darkgray", "darkblue", "darkcyan"];
+    // 배열 만들기 2
+    console.dir(window);
+    //window에 적용된거 보기 맞나?! 하여간 window프로퍼티 확인 ㄱㄴ
+    const viewWidth = window.innerWidth;
+    //상수 viewWidth에 window.innerWidth를 넣는다...아마 처음 가로폭 픽셀일듯
+    //화면 처음의 픽셀값이라 사이즈 변환시 수동으로 F5해줘야 전체값이 바뀐다
+    //vw방식 ㄴㄴ
+    const viewHeight = window.innerHeight;
+    // 위와 동일인데 얘는 높이라는 차이
+    console.log(viewWidth);
+    //
+    console.log(viewHeight);
+    root.style.width = viewWidth + "px";
+    //숫자만 불러왔던거라 따로 px이라는 단위를 붙여준다
+    root.style.height = viewHeight + "px";
+    //마찬가지
+    root.style.backgroundColor = "#c4c4c4";
+    //초기값 스타일링
+    root.addEventListener("click", function () {
+      for (let i = 0; i < sectionArr.length; i++) {
+        //i가 다 불러오는 것인가?
+        let sectionElement = document.createElement("section");
+        sectionElement.textContent = sectionArr[i];
+        sectionElement.style.width = viewWidth + "px";
+        sectionElement.style.height = (viewHeight / sectionArr.length) + "px";
+        sectionElement.style.backgroundColor = sectionColor[i];
+        root.appendChild(sectionElement);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
