@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+    // 상수 root은 문서의 id값 root이다
+    root.style.fontSize = "5rem";
+    // #root의 폰트사이즈는 5rem이다
+    let isStatus = true;
+    // 변수 isStatus은 ture이다 변수만 우선 정의
+    let current = 0;
+    // current는 숫자 0이다. ""가 없기에 01234같이 연산이 가능한 숫자이다
+    root.textContent = current;
+    // #root안에 current라는 변수를 텍스트로 넣는다
+    root.addEventListener('click', function () {
+      // #root을 클릭하면 동작한다
+      if (isStatus === true) {
+        // 만약 isSatatus가 true이면... 이전에 true로 정의했기에 클릭을 햇을때 처음에 이게 나온다
+        current++;
+        // current의 숫자를 1씩 증가시킨다
+        if (current >= 10) {
+          // ture에따라 증가하던중, current가 10보다 같거나 크면
+          isStatus = false;
+          // isStatus를 false로 바꾼다.. 이러면 이제 위의 식이 작동하지 않는다
+        }
+        // 여기까지가 0부터 10까지 증가하는 방식이다
+        root.textContent = current;
+        // #root의 안에 current변수에 해당하는 text가 출력되게 다시 정의한다.
+      } else {
+        // 처음조건이었던 isStatus가 성립하지않을때
+        current--;
+        // current를 -1씩 해준다
+        if (current <= 0) {
+          // 그렇게 계속 떨어지다가 0보다 같거나 작아지면
+          isStatus = true;
+          // isStatus를 다시 true로 바꿔줘 처음의 식을 반복하게한다
+        }
+        // 처음에 참에따라 증가...이후 거짓에따라 하락..각 마지노선 달성시 위아래를 바꾸면서 진행된다
+        root.textContent = current;
+        // 조건이 바뀌어서 출력되지않기에 다시 정의해준다// 약간 이해가 안된다.. 이 재정의 부분을 지우면 제대로 작동이 안되서 아마 조건에 따른 동작을 다 하고 이전에 새로 변수값을 정해줫기에 그거에 맞춰 다시 정의를 써준거라 생각한다
+      }
+    })
+  </script>
+
+</body>
+
+</html>
