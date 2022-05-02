@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0; margin: 0; box-sizing: border-box;
+    }
+    #root{
+      width: 100vw;
+      height: 100vh;
+    }
+    #circle{
+      width: 70vh;
+      height: 70vh;
+      border: 1px solid #aa2020;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      top: 10vh;
+      left: 45vw;
+    }
+    #bg{
+      width: 20vw;
+      height: 100vh;
+      background-color: #fff;
+      /* border: 1px solid #ccc; */
+      position: absolute;
+      z-index: 2;
+      left: 35vw;
+    }
+    #bg>div{
+      width: 3vw;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      top: 70vh;
+    }
+    #bg>div>div{
+      width: 1.5vh;
+      height: 1.5vh;
+      border-radius: 50%;
+      background-color: #aa2020;
+    }
+    #bg>div>div:hover{
+      cursor: pointer;
+    }
+    #rhombus{
+      /* border: 1px solid black; */
+      position: absolute;
+      z-index: 3;
+      top: 32vh;
+      left: 45vw;
+    }
+    #rhombus > div:nth-child(1){
+      width: 25vh;
+      height: 25vh;
+      border-radius: 80px;
+      background-color: #aa2020;
+      position: absolute;
+      z-index: 3;
+      transform: rotate( 30deg );
+    }
+    #rhombus > div:nth-child(1):hover{
+      transform: rotate( 10000deg );
+      transition: 20s;
+
+    }
+    #rhombus > div:nth-child(2){
+      width: 25vh;
+      height: 25vh;
+      border-radius: 80px;
+      background-color: rgba(170, 32, 32,1);
+      position: absolute;
+      z-index: 4;
+      left: 8vw;
+      top: -5vh;
+      filter: blur(40px);
+      transform: rotate( 30deg );
+    }
+    #rhombus > div:nth-child(2):hover{
+      filter: blur(200px);
+      transition: 1s;
+    }
+
+    p{
+      position: absolute;
+      z-index: 5;
+      top: 42vh;
+      left: 50vw;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="circle"></div>
+    <div id="bg">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="rhombus">
+      <div></div>
+      <div></div>
+    </div>
+    <p>advenced markup</p>
+  </div>
+
+</body>
+</html>
