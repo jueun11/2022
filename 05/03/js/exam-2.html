@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button id="btnA">어둡게</button>
+    <button id="btnB">밝게</button>
+    <h1>test</h1>
+  </div>
+
+
+  <script>
+    document.body.style.padding = "0";
+    document.body.style.margin = "0";
+
+
+    const root = document.getElementById('root');
+    const btnA = document.getElementById("btnA");
+    const btnB = document.getElementById("btnB");
+    const text = document.getElementsByTagName("h1")[0];
+    
+    
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    console.log(text);
+//     colorValue = 0;
+//     colorValue2 = 0;
+//     btnA.addEventListener('click',function(){
+//       if(colorValue===0){
+//         console.log('yes');
+//         colorValue++;
+//         root.style.backgroundColor = "black";
+//         text.style.color = "white";
+//       }
+//     else{
+//       console.log('no');
+//       colorValue = 0;
+//       root.style.backgroundColor = "white";
+//       text.style.color = "black";
+//     }
+//     })
+//     btnB.addEventListener('click',function(){
+//       if(colorValue===0){
+//         console.log('yes');
+//         colorValue++;
+//         root.style.backgroundColor = "black";
+//         text.style.color = "white";
+//       }
+//     else{
+//       console.log('no');
+//       colorValue = 0;
+//       root.style.backgroundColor = "white";
+//       text.style.color = "black";
+//     }
+//     })
+// //방식 1. 다시 누르면 원래 상태로 돌아감
+
+
+
+
+
+
+
+
+
+    btnA.addEventListener('click',function(){
+    
+        root.style.backgroundColor = "black";
+        text.style.color = "white";
+
+    })
+    // btnB.addEventListener('click',function(){
+    //     root.style.backgroundColor = "white";
+    //     text.style.color = "black";
+
+    // })
+
+
+
+    //방식2. if문 사용 x
+  </script>
+</body>
+</html>

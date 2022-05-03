@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #root>div {
+      margin: 2vw;
+      font-size: 2rem;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- 
+  const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+  1. A버튼을 클릭할때마다 <div> 태그에 배열의 포켓몬스터들이 하나씩 나타나게 만드세요.
+  2. 마지막 포켓몬스터가 나온다음은 "포켓몬스터를 다모았다" 라는 텍스트를 나타나게 만드세요. -->
+
+  <div id="root">
+    <div>pokemon</div>
+    <button>click</button>
+  </div>
+
+
+
+  <script>
+    
+    /*
+    
+    1. 식별할 녀석들을 작성해준다.
+    2. 이벤트가 일어날때 배열에 있는 값이 나타난다. --> 숫자를 써먹어야겠다.
+    3. 이벤트가 일어날때 배열에 있는 원소들이 순차적으로 나타난다.
+    4. 마지막 원소가 나타난 뒤에는 새로운 텍스트 "포켓몬을 다모았다"를 보여준다.
+    
+    */
+   
+   const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+  // 이따 써먹을 배열만들기
+   const completeText = "포켓몬을 다모았다.";
+ //이따가 배열 다 쓰고나면 나올 멘트
+    const root = document.getElementById("root");
+    //root 지정 늘하던거
+    const div = root.children[0];
+    // 변수 div는 root의 첫번째 자식이다
+    const button = root.children[1];
+    // 변수 button은 root의 두번째 자식
+    console.log(root);
+    console.log(div);
+    console.log(button);
+    //제대로 대입이 되었는지 콘솔로 확인...만들고 바로 확인해야 나중에 꼬이지않는다
+
+    let current = 0;
+    // 보통이렇게 = 0을 넣는건 이 숫자로 무언가 하려는 것
+    let isEnd = false;
+    // 이것도 참 , 거짓으로 무언가 하려는것. 수단이다
+    button.addEventListener('click', function() {
+      //버튼을 누르면 나오는 이벤트
+      if(current < practics.length) {
+        //current의 값이 practics의 길이 수 보다 작으면
+        const makeDiv = document.createElement("div");
+        //makeDiv는 문서에 만들어진 div이다... createElement는 새 태그를 자바스크립트로 만드는 방법
+        //괄호안에는 원하는 태그를 넣는다
+        makeDiv.textContent = practics[current];
+        //그리고 그렇게 만들어진 div의 텍스트부분에 배열[숫자]를 넣는다
+        div.appendChild(makeDiv);
+        //그렇게 만들어진 div는 div안에 드간다는 의미
+        //(부모요소).append(추가할 자식요소..지금경우에는 div를 의미한다); 
+        console.log(practics[current]);
+        //제대로 출력되는지 확인
+        current++;
+        //current의 값을 하나씩 올려준다. practics[current]이고 처음에는 0이엇으니,
+        //한번 위에 조건에 따라 작동한 후, 조건을 만족한다면 +1한 숫자를 넣고 진행된다
+      } 
+
+      if(current >= practics.length) {
+        //그러다가 위의 조건이 끝난상태의 조건이 되었을때
+        console.log('hello');
+        div.textContent = completeText;
+        //div의 텍스트부분에 처음에 정의했던 completeText를 넣는다
+        isEnd = true;
+        //?
+        console.log(isEnd + "트루로 바뀌었습니다.")
+      }
+      
+      if(isEnd === true) {
+        current = 0;
+        //current값 초기화
+        console.log(current + " : current 값이 0으로 바뀌었습니다.");
+        isEnd = false;
+      }
+
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
