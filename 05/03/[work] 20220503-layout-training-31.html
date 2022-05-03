@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding: 0; margin: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+    }
+    #root>div:nth-child(1){
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #root>div:nth-child(2){
+      width: 100vw;
+      height: 20vh;
+      background-color: #fff;
+      /* border: 1px solid red; */
+      position: absolute;
+      top: 50.6vh;
+    }
+    #root>div:nth-child(3){
+      width: 100vw;
+      height: 20vh;
+      background-color: #fff;
+      /* border: 1px solid red; */
+      position: absolute;
+      top: 28.2vh;
+    }
+    h1{
+      height: 7.1vh;
+      display: flex;
+      font-size: 3rem;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+    .rotate{
+      transform: rotate(180deg);
+
+    }
+    #o{
+      /* position:absolute; */
+/* 영역구분용 */
+    }
+    #o>h1:nth-child(1){
+      position:relative;
+      top: -1.7vh;
+    }
+    #o>h1:nth-child(2){
+      position:relative;
+      top: -6.4vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <h1>WH<div class="rotate">A</div>TEVERY<div id="o"><h1>O</h1><h1>O</h1></div><div class="rotate">U</div>W<div class="rotate">A</div>NT</h1>
+    </div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
