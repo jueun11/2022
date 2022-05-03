@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>A</button>
+  <h1>
+  </h1>
+  
+
+  
+  <script>
+
+
+    const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+    const h1 = document.getElementsByTagName('h1')[0];
+    const Btn = document.getElementsByTagName('button')[0];
+    console.log(Btn);
+    console.log(h1);
+    // let text = h1.textContent;
+    // console.log(text);
+    // h1.textContent = "a";
+    // Btn.addEventListene;("click", function(){
+      //   // h1.innerHTML = practics;
+      
+      //   console.log(document.body);
+      //   for(let i = 0; i < practics.length; i++) {
+        //     h1.textContent = practics[i];
+        //     // document.createElement('h1');
+        //       // h1.innerHTML = practics[i];
+        //       // document.createElement('h1');
+
+        //   }
+        
+        // })
+        
+    let isStatus = 0;
+    Btn.addEventListener("click",function(){
+      // for(let i = 0; i<practics.length; i++){
+      //   document.createElement('h1');
+      //   // NewH1.appendChild(NewText);
+      //   // document.body.appendChild(NewH1);
+      //   h1.textContent = practics[0];
+
+      //   // isStatus++;
+      //   console.log(h1);
+      // }
+      if(isStatus < practics.length) {
+        h1.textContent = practics[isStatus];
+        isStatus++
+          console.log(h1);
+      } else{
+        h1.textContent ="다모았다";
+      }
+    })
+    
+
+
+  </script>
+  
+  
+</body>
+</html>

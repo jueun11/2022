@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button>버튼</button>
+    <div id="nemo"></div>
+  </div>
+  
+  <script>
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    
+    const root = document.getElementById("root");
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.backgroundColor = "black";
+
+    let button = document.getElementsByTagName("button")[0];
+    console.log(button);
+
+    let nemo = document.getElementById("nemo");
+    console.log(nemo);
+
+    let colorValue = 0;
+    // let nemoValue = 0;
+    button.addEventListener("click",function(){
+      console.log(button);
+      if(colorValue === 0) {
+        root.style.backgroundColor = "salmon";
+        nemo.style.width = "10vw"
+        nemo.style.height = "10vw"
+        nemo.style.backgroundColor = "white";
+        nemo.style.position = "absolute";
+        nemo.style.left = "40vw";
+        nemo.style.top = "20vh";
+        colorValue++;
+      } else{
+        root.style.backgroundColor = "black";
+        nemo.style.width = "0vw"
+        nemo.style.height = "0vw"
+
+        colorValue = 0;
+      }
+    });
+    root.addEventListener("wheel",function(){
+      if(colorValue === 0) {
+        root.style.backgroundColor = "salmon";
+        colorValue++;
+        console.log(root);
+      } else{
+        root.style.backgroundColor = "black";
+
+        colorValue = 0;
+      }
+    })
+
+  </script>
+</body>
+</html>
