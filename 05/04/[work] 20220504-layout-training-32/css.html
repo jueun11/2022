@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    #root{
+      width: 100vw;
+      height: 100vh;
+    }
+    #bg{
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 0.5fr 1.2fr 1.6fr 2fr ;
+    }
+    #bg>:nth-child(1){
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+    }
+    #bg>:nth-child(1)>div{
+      width: inherit;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      margin-top: 3vh;
+      justify-content: space-between;
+    }
+    #bg>:nth-child(1)>div>div{
+      background-color: rgb(68, 68, 68);
+      width: 10vh;
+      height: 10vh;
+    }
+    #bg >:nth-child(2){
+      background-color: rgb(170, 170, 170);
+      padding: 2vw;
+      color: rgb(75, 75, 75);
+    }
+    #bg >:nth-child(2)>p{
+      text-align: justify;
+    }
+    #bg >:nth-child(3){
+      background-color: rgb(143, 143, 143);
+      padding: 2vw;
+      display: flex;
+      align-items: flex-end;
+    }
+    #bg > :nth-child(3)>p{
+      color: #ccc;
+      text-align: justify;
+    }
+    #bg >:nth-child(4){
+      background-color: rgb(77, 77, 77);
+      padding: 2vw;
+      display: flex;
+      align-items: center;
+    }
+    #bg >:nth-child(4) > p {
+      color: #ccc;
+      text-align: justify;
+    }
+
+    #black {
+      width: 40vw;
+      height: 50vh;
+      position: absolute;
+      top: 10vh;
+      left: 30vw;
+      border-top-left-radius: 600px;
+      border-top-right-radius: 500px;
+      border-bottom-left-radius: 250px;
+      border-bottom-right-radius: 300px;
+      transform: rotate(30deg);
+
+      background-color: rgba(0, 0, 0, 0.7);
+      filter: drop-shadow( 50px 70px 16px rgb(44, 44, 44));
+    }
+    #text{
+      position: absolute;
+      top: 30vh;
+      left: 40vw;
+    }
+    #text > h1 {
+      color: white;
+      font-size: 5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="bg">
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, nulla laboriosam blanditiis ex ipsam expedita officiis autem? Corporis consectetur debitis ducimus nisi cupiditate sapiente aut perferendis eius magnam consequuntur et, iste magni doloremque. Libero repellendus accusantium dolorem? Possimus dicta atque officiis quas veritatis qui officia aliquid adipisci, laborum, explicabo laboriosam.</p>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis vero neque dicta. Facilis maxime numquam laudantium, cumque itaque voluptatibus. Ab provident nisi tempora id porro dolor, doloremque rem voluptatum? Non architecto ipsum voluptatibus beatae esse ullam nostrum voluptates unde fugit placeat praesentium, omnis aspernatur quos atque neque, expedita tempore alias?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis vero neque dicta. Facilis maxime numquam laudantium, cumque itaque voluptatibus. Ab provident nisi tempora id porro dolor, doloremque rem voluptatum? Non architecto ipsum voluptatibus beatae esse ullam nostrum voluptates unde fugit placeat praesentium, omnis aspernatur quos atque neque, expedita tempore alias?</p>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sunt modi, assumenda consectetur sit iure dolorum sint, dignissimos, ea consequatur pariatur perferendis veniam veritatis praesentium quam error totam voluptas? Suscipit explicabo delectus quod animi, iure corrupti consectetur, tempora error necessitatibus amet consequatur tempore nesciunt, pariatur omnis architecto repudiandae? Fugit, illum!</p>
+      </div>
+    </div>
+    <div id="black">
+    </div>
+    <div id="text">
+      <h1>BIG FONT</h1>
+    </div>
+  </div>
+</body>
+</html>
