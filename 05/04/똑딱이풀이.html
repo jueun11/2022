@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="alram">따르릉</h1>
+  <button id="a">A클릭</button>
+  <button id="b">B클릭</button>
+
+  <script>
+
+let a = "똑";
+let b = "딱";
+//출력할 똑이랑 딱 변수 지정
+let isStatus = true;
+let current = 0;
+
+const alram = document.querySelector('#alram');
+//상단 텍스트 부분
+const aBtn = document.querySelector('#a');
+//a버튼
+const bBtn = document.querySelector('#b');
+//b버튼 쿼리셀렉터로 id값 가져옴
+console.dir(alram);
+
+
+
+aBtn.addEventListener('click', function() {
+  //a버튼을 누르면 발생하는 이벤트
+  const timer = setInterval(function() {
+    if(isStatus === true) {
+      alram.textContent = a;
+      // console.log(a);
+      isStatus = false;
+    } else {
+      alram.textContent = b;
+      console.log(b);
+      isStatus = true;
+      current++;
+      console.log(`지금 똑딱이 횟수는 ${current} 입니다.`);
+      alram.textContent = b + `        지금 똑딱이 횟수는 ${current} 입니다.`;
+
+      // alram.style.margin = current + "px";
+    }
+// -----------------------------------------------
+    bBtn.addEventListener('click', function() {
+      clearInterval(timer);
+      //더이상 안뜸
+    });
+// -----------------------------------------------
+    alram.textContent = `지금 똑딱이 횟수는 ${current} 입니다.`;
+  }, 1000);
+});
+//여러번 누르면 빨라진다
+
+
+
+  </script>
+
+  
+  
+  
+</body>
+
+</html>
