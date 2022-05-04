@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    section{
+      width: 200vw;
+      height: 20vh;
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      pointer-events: none;
+    }
+    section > div {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </div>
+
+
+
+  <script>
+    let root = document.getElementById("root");
+    let slider = document.querySelector("section");
+    console.log(slider);
+
+  </script>
+</body>
+</html>
