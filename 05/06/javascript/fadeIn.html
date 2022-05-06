@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="click-button">click</button>
+  <script>
+    const root = document.getElementById('root');
+    // root.style.width = "300px";
+    // root.style.height = "300px";
+    root.style.backgroundColor = "#aa2020";
+
+    const clickBtn = document.getElementById('click-button');
+
+    let opacityValue = 0;
+    let widthValue = 0;
+    // root.style.opacity = opacityValue;
+
+    let Value = 0;
+    //*무조건 우회해서 한다는 마인드 와리가리 치려면 임의의 변수값을 활용
+
+    clickBtn.addEventListener('click',function(){
+      // opacityValue = 1;
+      // root.style.opacity = opacityValue;
+      if(Value === 0 ){
+        console.log('y');
+        Value = 1;
+        
+        let fadeIn = setInterval(function(){
+          if(widthValue < 200 ){
+            opacityValue = opacityValue + 0.1;
+            root.style.opacity = opacityValue;
+            widthValue = widthValue + 1;
+            root.style.width = widthValue + "px";
+            root.style.height = widthValue + "px";
+
+
+          }else{
+            clearInterval(fadeIn);
+          }
+        },0.1);
+      }
+      else{
+        Value = 0;
+        console.log('n');
+        let fadeOut = setInterval(function(){
+          if(widthValue > 0){
+            // opacityValue = opacityValue - 0.1;
+            // root.style.opacity = opacityValue;
+            widthValue = widthValue - 1;
+            root.style.width = widthValue + "px";
+            root.style.height = widthValue + "px";
+          }else{
+            clearInterval(fadeOut);
+          }
+        },0.1);
+      }
+
+    });
+
+    
+
+
+  </script>
+</body>
+</html>
