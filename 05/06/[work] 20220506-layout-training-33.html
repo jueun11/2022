@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+    }
+    section{
+      width: 25vw;
+      height: 30vh;
+      color: gray;
+      text-align:justify;
+      position: relative;
+      top: 25vh;
+      left: 45vw;
+      z-index: -2;
+    }
+    article{
+      width: 25vw;
+      height: 60vh;
+      background-color: rgba(255, 255, 255,0.7);
+      border-radius: 50px;
+      position: absolute;
+      border: 1px solid #ccc;
+      top: 10vh;
+      left: 30vw;
+      padding: 1.5vw;
+    }
+
+    article > div:nth-child(1) {
+      /* border: 1px solid black; */
+      height: 2vh;
+      justify-content: flex-end;
+      display: flex;
+    }
+    article > div:nth-child(1)>div{
+      width: 2vh;
+      /* border: 1px solid red; */
+    }
+    article > div:nth-child(1)>div::after{
+      position: relative;
+      top: -2vh;
+      content: "\00d7";
+      font-size: 2rem;
+      color: rgb(155, 155, 155);
+    }
+    article > div:nth-child(2) {
+      /* border: 1px solid black; */
+    }
+    article > div:nth-child(2)>h1{
+      font-size: 6rem;
+      font-weight: normal;
+      color: rgb(73, 73, 73);
+    }
+    article > div:nth-child(3) {
+      /* border: 1px solid black; */
+      margin-top: 3vh;
+      color: rgb(73, 73, 73);
+
+    }
+    article > div:nth-child(4) {
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3vh;
+    }
+    article > div:nth-child(4) >div{
+      width: 7vw;
+      height: 4vh;
+      background-color: rgb(184, 184, 184);
+      border-radius: 15px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      color: rgb(73, 73, 73);
+      font-size: 1rem;
+    }
+    #shadow{
+      width: 25vw;
+      height: 60vh;
+      background-color: rgba(41, 41, 41, 0.5);
+      border-radius: 50px;
+      position: absolute;
+      border: 1px solid #ccc;
+      top: 17vh;
+      left: 33vw;
+      padding: 1.5vw;
+      z-index: -1;
+      filter: blur(30px);
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ad esse et ex dolorum. Molestias assumenda ex enim quo perspiciatis quis fuga repudiandae dolor, sapiente ipsum minima eum, temporibus ad laudantium, exercitationem praesentium vero aperiam maxime magni? Facilis modi, quasi eaque adipisci molestias libero quas quidem sunt tempora. Dolorum, omnis eligendi placeat distinctio obcaecati deleniti tenetur a error inventore iste pariatur? Accusantium dicta mollitia iste! Praesentium cupiditate provident asperiores, distinctio debitis quo, aliquam dolores neque incidunt laudantium ea exercitationem quae voluptatibus, quaerat mollitia ut odit aperiam quibusdam nobis libero eligendi. Earum repudiandae dolorum perferendis impedit aspernatur amet labore et delectus?
+    </section>
+    <article>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <h1>LOREM<br>IPSUM</h1>
+      </div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolorum soluta odit non officiis vel! Vel quidem et natus accusamus illum, animi, nisi dolores numquam, aut sapiente ipsa illo. Aut voluptate magni quam suscipit obcaecati doloremque rerum molestias fugiat at vel. Nam natus accusamus soluta velit quisquam consequatur accusantium tempora.</div>
+      <div>
+        <div>close</div>
+      </div>
+    </article>
+    <div id="shadow"></div>
+  </div>
+</body>
+</html>
