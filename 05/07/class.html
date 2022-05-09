@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      border: 1px solid blue;
+    }
+    li {
+      background-color: brown;
+      color: color;
+    }
+    li:hover {
+      background-color: beige;
+      color: blue;
+    }
+    .on{
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li class="items">item-1</li>
+    <li class="items">item-2</li>
+    <li class="items">item-3</li>
+    <li class="items">item-4</li>
+    <li class="items">item-5</li>
+    <li class="items">item-6</li>
+    <li class="items">item-7</li>
+    <li class="items">item-8</li>
+    <li class="items">item-9</li>
+    <li class="items">item-10</li>
+  </ul>
+
+  <script>
+
+    const ul = document.querySelector('#menu');
+    console.log(ul);
+
+    ul.addEventListener('click',function(event){
+      //클릭, 함수(이벤트)... 이벤트란 클릭을 포함해서 작동을 햇을때 적용된 것
+      console.dir(event.target);
+      if(event.target.classList.contains('on')) {
+        //만약 이벤트타겟 클래스에 on이 있다면 ...
+        //이벤트 타겟이란, 이벤트가 작동한 대상을 말한다
+        event.target.classList.remove('on');
+        //이벤트 작동한 곳에 클래스 on을 지운다
+      } else {
+        //만약 작동한 곳에 on이라는 클래스가 없다면
+        console.log('그런 클래스는 없습니다');
+        event.target.classList.add('on');
+        //on이라는 클래스를 이벤트가 작동한 곳에 넣어준다
+      }
+    })
+  </script>
+</body>
+</html>

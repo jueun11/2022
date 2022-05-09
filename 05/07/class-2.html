@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div {
+      width: 40vw;
+      height: 40vw;
+      background-color: #aa2020;
+      transition: 1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .one{
+      border-radius: 50%;
+      transition: 1s;
+      background-color: #000000;
+      color: aliceblue;
+      font-size: 5rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>color</div>
+  </div>
+
+  <script>
+
+    const root = document.getElementById('root');
+    const nemo = root.children[0];
+    console.log(nemo);
+    
+    
+    nemo.addEventListener('click',function(event){
+      if(event.target.classList.contains('one')){
+        console.dir(nemo);
+        event.target.classList.remove('one');
+        event.target.style.backgroundColor = "#aa2020";
+      } else {
+        event.target.classList.add('one');
+        event.target.style.backgroundColor = "#000000";
+      }
+    })
+
+    let bodyValue = document.body;
+    let bgColorArr = ["black","blue","salmon"];
+
+    if(bodyValue.clientWidth > 768) {
+      bodyValue.style.backgroundColor = bgColorArr[0];
+    } 
+    else if (bodyValue.clientWidth < 450) {
+      bodyValue.style.backgroundColor = bgColorArr[1];
+    }
+    else {
+      bodyValue.style.backgroundColor = bgColorArr[2];
+    }
+  </script>
+</body>
+</html>
