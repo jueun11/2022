@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+
+  <script>
+    let name = ["빨강","초록","파랑"];
+    let bodyValue = document.body;
+    const text = document.querySelector('h1');
+    const bgColor = ["red","green","blue"];
+    
+    text.style.color = "#fff";
+    console.log(bodyValue.clientWidth);
+
+    if(bodyValue.clientWidth > 768) {
+      //젤큰거(웹)
+      console.log(name[0]);
+      text.textContent = name[0];
+      bodyValue.style.backgroundColor = bgColor[0];
+      
+    } else if (bodyValue.clientWidth > 480) {
+      //젤 큰 웹은 아니면서도 모바일화면보다 크면(테블릿)
+      //else if를 쓰는 이유는 뭘까? 정확히 모르겠다. 위의 조건을 충족시키지 않는경우중에서
+      //해당 경우이기 때문에 가독성상 그렇게 되는 걸까?
+      console.log(name[1]);
+      text.textContent = name[1];
+      bodyValue.style.backgroundColor = bgColor[1];
+
+    } else {
+      //걍 다 아니면..(모바일)
+      console.log(name[2]);
+      text.textContent = name[2];
+      bodyValue.style.backgroundColor = bgColor[2];
+
+    }
+
+    // if(bodyValue.clientWidth > 768) {
+    //   //젤큰거(웹)
+    //   console.log(name[0]);
+    //   text.textContent = name[0];
+    // } if (bodyValue.clientWidth > 480) {
+    //   //젤 큰 웹은 아니면서도 모바일화면보다 크면(테블릿)
+    //   //else if를 쓰는 이유는 뭘까? 정확히 모르겠다. 위의 조건을 충족시키지 않는경우중에서
+    //   //해당 경우이기 때문에 가독성상 그렇게 되는 걸까?
+
+//*else없이하니까 걍 전체화면에서도 두번째 조건이 나왔다. 조건이 밑에 식에 덮이지 않도록 else if로 사용
+
+
+    //   console.log(name[1]);
+    //   text.textContent = name[1];
+
+    // } else {
+    //   //걍 다 아니면..(모바일)
+    //   console.log(name[2]);
+    //   text.textContent = name[2];
+
+    // }
+  </script>
+</body>
+</html>
