@@ -31,6 +31,29 @@ const typeE = a => {} // * 매개변수가 하나일때는 소괄호도 안써�
 const typeD = function () {}
 // * 둘이 같은거임
 
+(function() {})();
+// * 선언이고 호출이고 모르겠고
+// * 즉시 실행하겠다
+// * 즉시 실행함수
+
+// * 문서 시작할 때 -> 즉시 시작 함수
+
+let test;
+
+test.addEventListener("type", function() {});
+// * 함수의 매개변수 자리에 함수가 들어가 있는것 "콜백함수"
+// * 콜백함수는 익명이 기본이다
+// * 매우많이 사용하기에 눈에 익혀야한다
+
+test.addEventListener("test", testFunction() {}); //* 소괄호를 사용하지 않는다는 특징이 있다
+
+
+function testFunction() {
+ // * 밖으로 빼낸 콜백함수
+ // * 기명으로 함수를 만들어줌
+}
+
+
 
 
 //비교연산자는 >=이다 . 헷깔리지x
