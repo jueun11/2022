@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    #button-elem{
+
+    }
+    #menu-items{
+
+    }
+    .none {
+      width: 15vw;
+      height: 10vh;
+      margin-top: 1vh;
+      background-color: #aa2020;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="button-elem">menu-1</div>
+    <div id="menu-items">item-1</div>
+
+    <div></div>      
+  </div>
+
+  <script>
+    const btnElem = document.getElementById('button-elem');
+    const menuItems = document.getElementById('menu-items');
+    console.log(btnElem);
+
+
+    let booleanType = true;
+    btnElem.addEventListener('click',function(){
+      if(booleanType === true){
+        booleanType = false;
+        menuItems.style.display = 'none';
+      }
+      else{
+        booleanType = true;
+        menuItems.style.display = 'block';
+
+      }
+    })
+
+
+  </script>
+</body>
+</html>
