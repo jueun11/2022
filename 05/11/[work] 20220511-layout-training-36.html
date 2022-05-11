@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main{
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+    }
+    main > section:nth-child(1) {
+      justify-content: flex-end;
+      /* display: none; */
+    }
+
+    h1{
+      font-size: 6rem;
+      position:relative;
+      justify-content: flex-end;
+      text-align: end;
+      opacity: 0.5;
+    }
+    h1:nth-child(1){
+      color: rgb(163, 0, 0);
+      top: 0vh;
+    }
+    h1:nth-child(2){
+      color: rgb(255, 28, 28);
+      top: -10vh;
+    }
+    h1:nth-child(3){
+      color: rgb(255, 55, 55);
+      top: -20vh;
+
+    }
+    h1:nth-child(4){
+      color: rgb(255, 31, 31);
+      top: -30vh;
+
+    }
+    h1:nth-child(5){
+      color: rgb(184, 0, 0);
+      top: -40vh;
+
+    }
+    h1:nth-child(6){
+      color: rgb(255, 163, 163);
+      top: -50vh;
+
+    }
+    main > section:nth-child(2) {
+      /* border: 1px solid blue; */
+      display: flex;
+      align-items: flex-end;
+      color: #ccc;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <main>
+      <section>
+        <h1>function</h1>
+        <h1>variable</h1>
+        <h1>index</h1>
+        <h1>constant</h1>
+        <h1>object</h1>
+        <h1>array</h1>
+      </section>
+      <section>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, odio?</p>
+      </section>
+    </main>
+  </div>
+
+
+  <script>
+    let root = document.getElementById('root');
+    let h1 = document.querySelector('h1');
+    console.log(h1);
+
+    let colorValue = true;
+    
+    h1.addEventListener("click",function(){
+
+    })
+
+  </script>
+</body>
+</html>
