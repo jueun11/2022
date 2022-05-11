@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+    }
+    #root > section {
+      width: 50vw;
+      height: 50vh;
+      background-color: salmon;
+      z-index: 2;
+    }
+    #popup-button{
+      position: absolute;
+      width: 10vw;
+      height: 5vh;
+      position: fixed;
+      z-index: 1;
+      top: 80vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button id="popup-button">click</button>
+  </div>
+
+  <script>
+    // const maker = document.getElementById('root');
+    // let article = document.createElement('article');
+    // maker.appendChild(article);
+    
+    // let count = 0;
+    // maker.addEventListener('wheel', function(){
+    //   console.log('휠이벤트가 일어나고 있어');
+    //   let section = document.createElement('section');
+    //   section.setAttribute('id',`section-${count}`);
+    //   section.textContent = count;
+    //   maker.appendChild(section);
+    //   count++;
+    // });
+    
+    // maker.addEventListener('click', function(){
+    //   console.log('클릭이벤트가 일어나고 있어');
+    //   let aside = document.createElement('aside');
+    //   let container = document.createElement('container');
+    //   aside.textContent = "클릭";
+    //   // maker.insertBefore(aside, maker[0]);
+
+    //   maker.insertBefore(container,maker[0]);
+    // });
+
+    const root = document.getElementById('root');
+    const clickBtn = document.getElementById('popup-button');
+
+    let popUp = document.createElement('section');
+    let popupValue = true;
+    
+    
+    clickBtn.addEventListener('click',function(){
+      if(popupValue === true){
+        root.appendChild(popUp);
+        popupValue = false;
+        console.log("y");
+      } else{
+          root.removeChild(popUp);
+          console.log("n");
+          popupValue = true;
+      }
+    });
+  </script>
+</body>
+</html>

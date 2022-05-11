@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;
+    overflow-x: hidden;}
+    #root{
+      width: 100vw;
+      height: 3000px;
+      background: linear-gradient(0deg, #ccc,#333);
+    }
+    #top-button{
+      width: 10vh;
+      height: 10vh;
+      border-radius: 50%;
+      border: none;
+      position: fixed;
+      bottom: 10vh;
+      right: 10vw;
+      filter: drop-shadow(7px 10px 10px rgb(0, 0, 0,0.2));
+    }
+    #top-button:hover{
+      cursor: pointer;
+      background-color: #aa2020;
+      transition: 1s;
+      border: none;
+
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button id="top-button">top</button>
+    
+  </div>
+
+  <script>
+    console.log(window);
+    const root = document.getElementById('root');
+    console.log(root);
+    let docTotalHeghtValue = document.body.scrollHeight;
+    let currentScrollValue = window.scrollY;
+    let topBtn = document.getElementById('top-button');
+    console.log(currentScrollValue);
+    
+    // topBtnValue = true;
+    topBtn.style.display = "none";
+    
+    topBtn.addEventListener('click', (event) => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      });
+      topBtn.style.display = "none";
+    });
+
+    root.addEventListener('wheel',(event) => {
+    console.log(scrollY);
+
+    if(scrollY === 0) {
+      topBtn.style.display = "none";
+
+    }
+    else {
+      topBtn.style.display = "block";
+    }
+      
+    
+    });
+
+
+  </script>
+</body>
+</html>

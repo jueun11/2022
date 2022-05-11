@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 3000px;
+      /* background: linear-gradient(0deg, #ccc,#333); */
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    
+  </div>
+
+  <script>
+    console.log(window);
+    const root = document.getElementById('root');
+    console.log(root);
+    root.style.backgroundColor = "black"  
+    let docTotalHeghtValue = document.body.scrollHeight;
+    let currentScrollValue = window.scrollY;
+
+    console.log(docTotalHeghtValue);  
+    
+    window.addEventListener('scroll', (event) => {
+      let currentScrollValue = window.scrollY;
+      // if (currentScrollValue > 0 ) {
+      //   console.log('당신은 방금 스크롤을 내렸습니다');
+      //   console.log(currentScrollValue);
+      // }
+      if(window.scrollY > 0) {
+        console.log('당신은 방금 스크롤을 내렸습니다');
+      }
+      if(window.scrollY >= 2048) {
+        console.log('ddd');
+
+      }
+    });
+
+    window.addEventListener('wheel',(event)=>{
+      // console.log(event.offsetY);
+      // let half = event.offsetY/2;
+      // console.log(half);
+    //   console.log(window.scrollY);
+
+
+    // if(event.offsetY > 1000) {
+    //     root.style.backgroundColor = "#aa2020";
+    //   }
+    // else if(event.offsetY < 1000){
+    //   root.style.backgroundColor = "black"  
+    // }
+    })
+
+  </script>
+</body>
+</html>
