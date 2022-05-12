@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    li{
+      list-style: none;
+    }
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #slide-show{
+      width: 30vw;
+      height: 60vh;
+      border: 1px solid red;
+      overflow: hidden;
+      display: flex;
+
+    }
+    #slides{
+      
+    }
+    ul> li:nth-child(1){
+      max-width: 100%;
+      max-height: 100%;
+    }
+    ul> li:nth-child(2){
+      max-width: 100%;
+      max-height: 100%;
+    }
+    ul> li:nth-child(3){
+      max-width: 100%;
+      max-height: 100%;
+    }
+    ul > li:nth-child(4) {
+      /* height: 100%; */
+      max-height: 50vh;
+      
+    }
+    
+
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="slide-show">
+      <ul class="slides">
+        <li><img src="3f56fbe8f414d8c90cacce42baae7775.jpg" id="mainImage" alt=""></li>
+        <!-- <li><img src="./img/glowing-453783.jpg" alt=""></li>
+        <li><img src="./img/lobby-398845.jpg" alt=""></li>
+        <li><img src="./img/p_32369-02-02-d3e005b0a9 (1).jpg" alt=""></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+
+    const slides = document.getElementsByClassName('slides');
+    //전체 슬라이드 컨테이너
+    console.log(slides);
+    const slidelmg = document.querySelector('.slides li');
+    let myImage = document.getElementById ( 'mainImage');
+    //모든 이미지들 
+    console.log(slidelmg);
+    let imgArry = ["3f56fbe8f414d8c90cacce42baae7775.jpg","glowing-453783.jpg","lobby-398845.jpg","p_32369-02-02-d3e005b0a9 (1).jpg"] 
+
+    imgArry[1].width = "100%";
+    console.log(imgArry);
+
+    let slideIndex = 1;
+      // for( i = 0;  i < slidelmg.length; i++){
+      //   slidelmg[i].style.display = "none"
+      // }
+    // setTimeout()
+    function slideShow() {
+      myImage.setAttribute("src",imgArry[slideIndex]);
+      slideIndex++;
+      console.log(slideIndex);
+      slidelmg.innerHTML[imgArry];
+      console.log(imgArry);
+      if(slideIndex >= imgArry.length){
+        slideIndex = 0;
+      }
+    }
+    setInterval(slideShow, 2000);
+
+    
+    //타이밍을 맞춰서 투명도가 조절되게 한다
+    let opacityValue = 0;
+    if(opacityValue === 0) {
+      opacityValue+0.1;
+    }
+  </script>
+</body>
+</html>
