@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    section:nth-child(1){
+      width: 20vw;
+      height: 60vh;
+      /* border: 3px solid black; */
+      z-index: 2;
+      position:absolute;
+      left: 25vw;
+      top: 10vh;
+      background-color: rgb(0, 185, 123);
+    }
+    section:nth-child(2){
+      width: 20vw;
+      height: 60vh;
+      background-color: #ccc;
+      z-index: 1;
+      position:absolute;
+      filter: blur(1px);
+      opacity: 0.7;
+    }
+    
+    section:nth-child(1) > div:nth-child(1) {
+      background-color: rgb(204, 97, 214);
+      height: 30vh;
+      border-top: 3px solid black;
+      border-left: 3px solid black;
+      border-right: 3px solid black;
+      padding: 1vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    section:nth-child(1) > div:nth-child(1)  >h1{
+      width: 15vw;
+      font-size: 2.7rem;
+      font-style: italic;
+      color: white;
+      border-bottom: 1px solid rgb(83, 18, 88);
+    }
+    section:nth-child(1) > div:nth-child(2) {
+      background-color: rgb(0, 185, 123);
+      height: 30vh;
+      border: 3px solid black;
+      padding: 1vw;
+      padding-top:2vw ;
+      color: rgb(0, 102, 68);
+      font-style: italic;
+    }
+    section:nth-child(1) > div:nth-child(3){
+      width: 10vw;
+      height: 5vh;
+      background-color: rgb(251, 255, 0);
+      border-radius: 25px;
+      position: absolute;
+      top: 27.5vh;
+      left: 8vw;
+      border: 3px solid rgb(165, 0, 0);
+      display: flex;
+      justify-content: center;
+      color: rgb(0, 185, 123);
+      font-size: 1.8rem;
+      font-weight:900;
+      font-style: italic;
+    }
+    section:nth-child(1) > div:nth-child(3):hover{
+      border: 3px solid rgb(255, 0, 0);
+
+    }
+
+    section:nth-child(2) > div:nth-child(1) {
+      height: 30vh;
+      padding: 1vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    section:nth-child(2) > div:nth-child(1) > h1 {
+      font-size: 3.5rem;
+      color: gray;
+      font-weight: lighter;
+    }
+    section:nth-child(2) > div:nth-child(2) {
+      height: 30vh;
+      padding: 1vw;
+      padding-top:2vw ;
+      color: gray;
+      text-align: justify;
+    }
+    section:nth-child(2) > div:nth-child(3){
+      height: 5vh;
+      border-radius: 25px;
+      position: absolute;
+      top: 27.5vh;
+      right: 1vw;
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      color: gray;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section>
+      <div>
+        <h1>BORDERLINE</h1>
+        <h1>DESIGN</h1>
+      </div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sequi dolores aperiam voluptate, consectetur voluptas eveniet deserunt perspiciatis natus, omnis repellat temporibus accusantium est nobis quibusdam facere minus ipsa. Officia repellendus in perferendis sit, ipsam saepe doloribus ea eligendi dolore incidunt optio modi illum, voluptatem adipisci placeat aut dicta fugit?</div>
+      <div id = "message-Button"></div>
+    </section>
+    <section>
+      <div>
+        <h1>BORDERLINE</h1>
+        <h1>DESIGN</h1>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio itaque, fugiat earum placeat dolore laboriosam omnis sapiente optio nisi ipsa illum id officia commodi veniam animi temporibus quasi! Hic voluptatem ducimus soluta maiores saepe, minima doloribus cupiditate libero non reiciendis distinctio ea. Quas minus vel molestias corporis odio consectetur molestiae.
+      </div>
+      <div>lorem ipsum</div>
+    </section>
+  </div>
+
+
+
+  <script>
+    const messageBtn = document.getElementById('message-Button');
+    messageBtn.textContent = "gooood?";
+
+    
+
+
+  </script>
+</body>
+</html>
