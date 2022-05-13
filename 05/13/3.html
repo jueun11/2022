@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+    }
+    #menu{
+      display: flex;
+    }
+    #menu > section:nth-child(1){
+      width: 5vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #aa2020;
+      z-index: 1;
+    }
+    #menu > section:nth-child(2){
+      width: 30vw;
+      height: 100vh;
+      position: absolute;
+      left: -30vw;
+      /* 전 */
+      /* 후 */
+      background-color: #aa2020;
+      border: 1px solid blue;
+      z-index: 1;
+    }
+    .move{
+      left: 5vw;
+      transition: 1s;
+    }
+    .menuBtn{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* opacity: 0; */
+      transform: rotate(45deg);
+      transition: 1s;
+
+    }
+    .menuBtn:before, .menuBtn:after {
+      position: absolute;
+      content:' ';
+      height: 20px;
+      width: 4px;
+      border-radius: 5px;
+      background-color: rgb(53, 53, 53);
+      z-index: 3;
+    }
+    .menuBtn:before {
+      transform: rotate(45deg);
+    }  
+    .menuBtn:after {
+      transform: rotate(-45deg);
+    } 
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="menu">
+      <section>
+        <div class="menuBtn"></div>
+      </section>
+      <section></section>
+    </div>
+  </div>
+  <script>
+    let menu = document.getElementById('menu');
+    let menu2 = menu.children[1];
+    let btn = document.getElementsByClassName('menuBtn')[0];
+    console.log(btn);
+    menu2.style.left = "-30vw"
+    btn.addEventListener('click',function(){
+      console.log('작동');
+      menu2.classList.toggle('move');
+      console.log(btn);
+      
+    });
+  </script>
+</body>
+</html>

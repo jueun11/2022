@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    #menu{
+      display: flex;
+      /* border: 1px solid red; */
+    }
+    #menu > section:nth-child(1) {
+      width: 5vw;
+      height: 50vh;
+      background-color: #ccc;
+      /* border: 1px solid blue; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .open{
+      width: 3vw;
+      height: 3vw;
+      position: relative;
+      z-index: 2;
+      background-color: gray;
+      border-radius: 50%;
+    }
+    .close{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .close:before, .close:after {
+      position: absolute;
+      content:' ';
+      height: 40px;
+      width: 4px;
+      border-radius: 5px;
+      background-color: rgb(53, 53, 53);
+      z-index: 1;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    } 
+    .close:after {
+      transform: rotate(-45deg);
+    }
+
+
+    #menu > section:nth-child(2) {
+      width: 20vw;
+      height: 50vh;
+      background-color: #ccc;
+      /* border: 1px solid blue; */
+      padding: 3vw;
+    }
+    .menu-item{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #items{
+      width: inherit;
+      height: 5vh;
+      border-radius: 5px;
+      background-color: rgb(224, 224, 224);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(53, 53, 53);
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <nav id="menu">
+      <section>
+        <div class="open"></div>
+        <div class="close"></div>
+      </section>
+      <section>
+        <div class="menu-item">
+          <div id="items">menu-1</div>
+          <div id="items">menu-2</div>
+          <div id="items">menu-3</div>
+          <div id="items">menu-4</div>
+          <div id="items">menu-5</div>
+          <div id="items">menu-6</div>
+        </div>
+      </section>
+    </nav>
+  </div>
+
+  <script>
+    let openBtn = document.getElementsByClassName('open')[0];
+    let closeBtn = document.getElementsByClassName('close')[0];
+    console.log(closeBtn);
+    // closeBtn.style.display = "none";
+    let openBtnopacityValue = 1;
+    openBtn.style.opacity = openBtnopacityValue;
+    closeBtn.style.opacity = "0";
+
+    let menu = document.getElementById('menu');
+    let menu1 = menu.children[0];
+    console.log(menu1);
+    let menu2 = menu.children[1];
+    console.log(menu2);
+
+    menu2.style.display = "none";
+    menuValue = true;
+    console.log(openBtn);
+    openBtn.addEventListener('click',function(){
+      console.log('열기');
+      if(menuValue===true){
+        openBtn.style.opacity = openBtnopacityValue;
+        openBtnopacityValue = 1;
+        menu2.style.display = "block";
+        closeBtn.style.opacity = "1";
+        openBtn.style.opacity = "0";
+        
+        let fadeIn = setInterval(function(){
+          if(openBtnopacityValue > 0){
+            openBtnopacityValue = openBtnopacityValue - 0.1;
+            openBtn.style.opacity = openBtnopacityValue;
+            console.log(openBtnopacityValue);
+          }else{
+            clearInterval(fadeIn);
+          }
+          // else if(openBtnopacityValue < 1){
+
+          // }
+        },10);
+
+        openBtnopacityValue = 0;
+        menuValue = false;
+        
+        // 자연스럽게 돌아가는 효과가..?
+      } else {
+        menu2.style.display = "none";
+        closeBtn.style.opacity = "0";
+        let fadeOut = setInterval(function(){
+          if(openBtnopacityValue < 0 ){
+            console.log('닫기');
+            openBtn.style.opacity = openBtnopacityValue + 1;
+            //+가 안된다
+            // openBtn.style.opacity = openBtnopacityValue;
+            console.log(openBtnopacityValue);
+          }else{
+            clearInterval(fadeOut);
+          }
+          
+          
+        },10)
+        // let fadeOut = setInterval(f)
+        
+        openBtnopacityValue = 1;
+        // openBtn.style.opacity = openBtnopacityValue;
+
+        menuValue = true;
+      }
+    });
+  </script>
+</body>
+</html>
