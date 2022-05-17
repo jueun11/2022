@@ -22,9 +22,17 @@ console.log(getPokemon);
 
 console.log("Venusaur는 " + (pokemon.all().indexOf('Venusaur')+1)+"번째 포켓몬이다");
 
-// * 불러온건 몇번째 포켓몬인가
 
-console.log(getPokemon + "는 " + (pokemon.all().indexOf(getPokemon)+1)+"번째 포켓몬이다");
+//* A가 들어가는 포켓몬의 수
+let joinpokemon = pokemon.all().join()
+// console.log(joinpokemon);
+let count = 0;
+for (let i = 0; i < joinpokemon.length; i++) {
+  if(joinpokemon[i] === "A") {
+    count++;
+  }
+}
+console.log(count);
 
 
 
