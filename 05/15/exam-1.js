@@ -2,12 +2,19 @@ const dummyText = ["Lorem", "Ipsum", "is", "simply", "dummy", "text", "of", "the
 
 // Todo : Q-1. "of" 라는 문자열이 몇번 나오는지 console에 출력하세요.
 let count = 0;
+//count 에 0을 넣는다
 for (let i = 0; i < dummyText.length; i++) {
+  //더미텍스트의 길이만큼 쭉 더한다....
   if(dummyText[i] === "of") {
+    //더하다가 n번째 항목에서 of가 일치하면
     count++;
+    //카운트를 증가시킨다
   }
 }
 console.log(count);
+//of를 마주칠때마다 카운트를 올렸기에. 전체 길이만큼 식을 진행했을때
+//of의 갯수가 출력된다
+
 
 let count = 0;
 let result = dummyText.filter(function(index){
