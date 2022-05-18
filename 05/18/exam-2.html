@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    ul{
+      width: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: 1s;
+
+    }
+    li{
+      background-color: #ccc;
+      width: 10vh;
+      height: 10vh;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      transition: 1s;
+    }
+    #click-button{
+      margin-top: 15vh;
+      width: 10vw;
+      height: 5vh;
+      border: none;
+      background-color: #ccc;
+      font-size: 1.5rem;
+    }
+    #click-button:hover{
+      cursor: pointer;
+      background-color: rgb(129, 129, 129);
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
+    <button id="click-button">click</button>
+  </div>
+
+
+
+  <script>
+    const circle = document.querySelectorAll('ul >li');
+    const clickBtn = document.getElementById('click-button');
+    // console.log(circle);
+    // let count = -1;
+    
+    // circle.forEach(function(element){
+    //   if(element%2==1){
+    //     // circle.push(element);
+    //   }
+    // });
+    // console.log(circle[count]);
+    
+    clickBtn.addEventListener('click' , function(){
+      // circle[count]
+      // // circle[count].style.position = "relative";
+      // console.log(circle[count]);
+      // if(count < 8) {
+      //   count++;
+      // }else{
+      //   count = 0;
+      // }
+        let count = 0;
+      // .forEach(function(count){
+      // if(count%2==1){
+      //   // circle[count].style.backgroundColor = "#aa2020";
+      //   return true;
+      //   console.log('빨강');
+      // }
+      let isEven = function(value) {
+        return value % 2 ===0;
+      };
+      let newcircle = count.filter(isEven);
+      console.log(newcircle);
+      let arr = true;
+    });
+
+    // if(arr = true){
+    //   circle[count].style.backgroundColor = "red";
+    // }
+      // if(count%2==1){
+      //   circle[count].style.backgroundColor = "#aa2020";
+      //   circle[count].style.position = "relative";
+      //   circle[count].style.top = "10vh";
+      // } else{
+      //   circle[count].style.backgroundColor = "#ff9797";
+      //   circle[count].style.position = "relative";
+      //   circle[count].style.top = "-10vh";
+      // }
+
+
+    // });
+
+  </script>
+</body>
+</html>
