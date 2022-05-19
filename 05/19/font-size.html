@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+  </style>
+</head>
+<body>
+  <h1>#71bbee</h1>
+  <h2>#86ddf3</h2>
+  <h3>#feb2da</h3>
+  <h4>#8474c7</h4>
+  <h5>#ae8fdc</h5>
+  <h6>#d395e0</h6>
+
+
+  <script>
+    const h1 = document.querySelector('h1');
+    const h2 = document.querySelector('h2');
+    const h3 = document.querySelector('h3');
+    const h4 = document.querySelector('h4');
+    const h5 = document.querySelector('h5');
+    const h6 = document.querySelector('h6');
+
+
+
+    function thisEvent(element,font,color) {
+      element.addEventListener('click',function(){
+        this.style.fontSize = font;
+        this.style.color = color;
+        this.style.backgroundColor = color;
+        this.style.margin = "0";
+        this.style.transition = "1s";
+      });
+    }
+    // 예전에 minmix이던가 그거쓰는거랑 비슷한듯
+
+    thisEvent(h1,"7rem","#71bbee");
+    thisEvent(h2,"6rem","#86ddf3");
+    thisEvent(h3,"5rem","#feb2da");
+    thisEvent(h4,"4rem","#8474c7");
+    thisEvent(h5,"3rem","#ae8fdc");
+    thisEvent(h6,"2rem","#d395e0");
+    console.dir(h1);
+
+  </script>
+</body>
+</html>

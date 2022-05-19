@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    ul{
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+    }
+    li{
+      width: 10vh;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #button-left{
+      width: 5vh;
+      height: 5vh;
+    }
+    #button-right{
+      width: 5vh;
+      height: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button id="button-left"><</button>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button id="button-right">></button>
+  </div>
+
+  <script>
+    const leftBtn = document.getElementById('button-left');
+    const rightBtn = document.getElementById('button-right');
+    const numberBar = document.querySelector('ul');
+    const number = document.querySelectorAll('li');
+    const numberArr = Array.from(numberBar.children);
+    console.log(number);
+    console.log(numberArr);
+    let count = 0;
+    numberArr.forEach(function(element, index) {
+    console.log(index, element);
+    element.textContent = index;
+  });
+
+    // numberArr[count].style.color = "red";
+    leftBtn.addEventListener('click',function(){
+    console.log("왼쪽누름");
+    // numberArr.shift();
+    numberArr[count].style.color = "red";
+    // numberArr[count].style.display = "none";
+    // numberArr.shift(numberArr[count]);
+
+    // numberArr.push(numberArr[count]);
+    
+    count++;
+
+      // numberArr.push(numberArr[0]);
+      // numberArr.shift(numberArr[0]);
+
+      console.log(numberArr);
+    });
+
+    
+  </script>
+</body>
+</html>
