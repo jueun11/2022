@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    console.log(typeof root);
+    for (let properties in root) {
+      //root안의 프로퍼티 (많이 나옴)
+      const p = document.createElement('p');
+      p.textContent = properties;
+      root.appendChild(p);
+    };
+    const rootArray = Array.from(root.children);
+    for( count = 0; count < rootArray.length; count++);
+
+    console.log(count);
+    console.log(rootArray);
+    const rootArray2 = rootArray.filter(count => count% 2 === 0 );
+    // console.log(rootArray2);
+    
+    // console.log(rootArray[count]);
+
+
+
+    //   if(count%2==1) {
+      //     // rootArray.textContent.style.color="red";
+      //     // color="red";
+      //     // p.textContent.style.color = "red";
+    //     // textContent.style.color="red";
+    //     // console.log(element);
+    //     console.log(count);
+    //     // console.log(rootArray[count]);
+    //   }
+    
+    //   rootArray.forEach(function(count){
+      //   });    
+      // }
+      
+      // const arr = [];
+      // rootArray
+      </script>
+</body>
+</html>

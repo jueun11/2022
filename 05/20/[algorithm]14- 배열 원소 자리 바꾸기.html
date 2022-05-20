@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #click-button{
+      width: 10vw;
+      height: 10vh;
+      border: none;
+      background-color: #aa2020;
+    }
+    #click-button:hover{
+      cursor: pointer;
+      background-color: #da8989;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button id="click-button">click</button>
+  </div>
+
+
+  <script>
+    const arr = [ "a", "b", "c"];
+    const Btn = document.getElementById('click-button');
+    console.log(arr);
+
+    // Btn.addEventListener('click' , function(){
+    //   console.log('누름');
+    //   arr.push(arr[0]);
+    //   arr.splice( 0, 1 );
+    //   console.log(arr);
+    // });
+
+    // * bac로 만들기
+    Btn.addEventListener('click' , function(){
+      console.log('누름');
+      arr.reverse();
+      //반대로 뒤집음
+      arr.push(arr[0]);
+      //끝에 0번째 추가 뒤집었으니 arr[0]은 c이다. c를 맨 뒤에 붙여줌...[c b a c]
+      arr.shift();
+      //제일 앞 하나 삭제 (반대로 뒤집혔으니 c삭제) [c b a]
+      console.log(arr);
+    });
+  </script>
+</body>
+</html>
