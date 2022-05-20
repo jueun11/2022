@@ -37,24 +37,24 @@
     const Btn = document.getElementById('click-button');
     console.log(arr);
 
-    // Btn.addEventListener('click' , function(){
-    //   console.log('누름');
-    //   arr.push(arr[0]);
-    //   arr.splice( 0, 1 );
-    //   console.log(arr);
-    // });
-
-    // * bac로 만들기
     Btn.addEventListener('click' , function(){
       console.log('누름');
-      arr.reverse();
-      //반대로 뒤집음
       arr.push(arr[0]);
-      //끝에 0번째 추가 뒤집었으니 arr[0]은 c이다. c를 맨 뒤에 붙여줌...[c b a c]
-      arr.shift();
-      //제일 앞 하나 삭제 (반대로 뒤집혔으니 c삭제) [c b a]
+      arr.splice( 0, 1 );
       console.log(arr);
     });
+
+    // * bac로 만들기
+    // Btn.addEventListener('click' , function(){
+    //   console.log('누름');
+    //   arr.reverse();
+    //   //반대로 뒤집음
+    //   arr.push(arr[0]);
+    //   //끝에 0번째 추가 뒤집었으니 arr[0]은 c이다. c를 맨 뒤에 붙여줌...[c b a c]
+    //   arr.shift();
+    //   //제일 앞 하나 삭제 (반대로 뒤집혔으니 c삭제) [c b a]
+    //   console.log(arr);
+    // });
   </script>
 </body>
 </html>
