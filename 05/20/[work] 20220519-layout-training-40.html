@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    #target{
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+    }
+    .items{
+      width: 10vh;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 클래스를 활용해야 배열로 가져와지는것같다.. */
+    #button-left{
+      width: 5vh;
+      height: 5vh;
+    }
+    #button-right{
+      width: 5vh;
+      height: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <button id="button-left"><</button>
+    <ul id="target">
+      <li class="items"></li>
+      <li class="items"></li>
+      <li class="items"></li>
+      <li class="items"></li>
+      <li class="items"></li>
+    </ul>
+    <button id="button-right">></button>
+  </div>
+
+  <script>
+    const leftBtn = document.getElementById('button-left');
+    const rightBtn = document.getElementById('button-right');
+    const target = document.getElementById('target').children;
+    // const numberArr = Array.from(target.children);
+
+    /* 클래스를 활용해야 배열로 가져와지는것같다.. */
+    console.log(target);
+    const targetArr = Array.from(target);
+    console.log(Array.from(targetArr));
+    // console.log(numberArr);
+    //그냥하면 오류나는거같아서 from을통해 배열로 바꿔줬다. 작동은 하는데 내용이 바뀌진 않는다
+
+    
+    targetArr.forEach(function(element, index) {
+      console.log(index, element);
+      element.textContent = index+1;
+      //+1의 이유.. 0부터 표시되어서 +1로 1부터 표시되게 하였다
+    });
+    //자바스크립트로 텍스트를 넣어준다.. 위에 li에 넣으니 작동하지않았다.
+
+
+
+    rightBtn.addEventListener('click',function(){
+      // targetArr.push();
+      // console.log(targetArr);
+      console.log('오른쪽 버튼 누름');
+      
+      targetArr.push(targetArr[0]);
+      targetArr.shift();
+      
+      targetArr.forEach(function(element, index) {
+        console.log(index, element);
+        element.textContent = index+1;
+      });
+      // targetArr.splice( 0, 1 );
+      // for(let i = 0; i < target.length; i++) {
+        // target[i].style.color = "red";
+        // 이것역시 작동은 한다
+        // }
+        // target[0].style.color = "red";
+        // //배열이 작동하긴함 근데 왜 배열 메소드는 작동하지 않을까?
+      });
+      
+      
+      leftBtn.addEventListener('click',function(){
+        // console.log(targetArr);
+        console.log('왼쪽 버튼 누름');
+        
+        targetArr.unshift(targetArr[targetArr.length-1]);
+        //letn
+        targetArr.pop();
+        //Q. 왜 마지막거를 제일앞에 추가하고, 제일 끝에 것을 없앤건데 이렇게된건지 잘 모르겠습니다
+        // targetArr.unshift(targetArr[4]);로 512345 가 되고 targetArr.pop(); 로 51234가 될줄 알았으나 반대로 움직입니다.
+
+      
+      targetArr.forEach(function(element, index) {
+        console.log(index, element);
+        element.textContent = index+1;
+      });
+    });
+    //일단 작동하긴하는데 이해가 필요할듯하다 어찌어찌되었는데 이대로라면 응용하기 어려울듯?
+
+
+    //Q. li에 내용을 넣으니 배열로 가져와도 제어가 안되었는데 어떤 가공이 필요한것인가요?..?---어떤식으로 li들을 자바스크립트로 가져와야 제어가 편할까요?
+
+    //Q. targetArr.unshift(targetArr[4]); 에서 4대신 lenght를 넣었더니 제대로 작동하지 않았습니다. 어떤식으로 길이를 반영해야 했을까요?
+
+    //a 수업시간 답변. targetArr[targetArr.length-1]로 표기했어야했다.
+  </script>
+</body>
+</html>
