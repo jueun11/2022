@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
 
 
 });
@@ -9,6 +9,6 @@ window.addEventListener('load', function(){
 //제이쿼리 방식
 // });
 
-window.addEventListener('DOMContentLoaded', function(){
-  
+window.addEventListener('DOMContentLoaded', function () {
+
 })

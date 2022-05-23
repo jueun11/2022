@@ -1,14 +1,13 @@
 let obj = {
-  a : 1,
-  b : 2,
-  c : 1,
-  d : 2,
-  sum : function(one, two) {
-    if(typeof one === "number" && typeof two === "number"){
-    //&&는 앞, 뒤 둘다 충족해야함
+  a: 1,
+  b: 2,
+  c: 1,
+  d: 2,
+  sum: function (one, two) {
+    if (typeof one === "number" && typeof two === "number") {
+      //&&는 앞, 뒤 둘다 충족해야함
       return one + two;
-    }
-    else {
+    } else {
       console.error("너 지금 데이터타입 입력 잘못했어");
     }
   }
