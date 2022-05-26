@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      /* background-color: #333; */
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+    <h1></h1>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+    console.dir(root);
+
+    let totalHeight = root.offsetHeight;
+    let Height50 = ((totalHeight * 50) / 100);
+    console.log(Height50);
+
+    // if(Height50>)
+    function percentOne(total, value) {
+      let result = (value / total) * 100;
+      console.log(`전체값 ${total}에서 ${value}만큼의 값은 : ${result}% 입니다.`);
+      return result;
+    }
+    console.log(percentOne(totalHeight, 463));
+
+    // let bgColorValue = 0;
+    // let bgColor = `rgb(${bgColorValue},${bgColorValue},${bgColorValue})`;
+
+    //전체값에서 퍼센트 값을 구하는 공식
+    // let result = (total * percent) / 100;
+
+    // let setResult = Math.round((255*35) / 100);
+    // console.log(setResult);
+
+    // root.style.backgroundColor = bgColor;
+    // // console.log(root);
+    // root.addEventListener('mousemove',(event) => {
+    //   // console.log(event.offsetX);
+    //   console.log(event.offsetY);
+    //   root.children[0].textContent = event.offsetX;
+    //   root.children[1].textContent = event.offsetY;
+    // });
+
+    root.addEventListener('mousemove',(event)=>{
+      let nowHeight = event.offsetY;
+      root.style.transition = "1s";
+      console.log(nowHeight);
+      if(nowHeight < Height50) {
+        console.log('검은색으로바뀜');
+        root.style.backgroundColor = "rgb(0,0,0)";
+
+      } else{
+        console.log('흰색으로바뀜');
+        root.style.backgroundColor = "rgb(255,255,255)";
+      }
+    });
+  </script>
+</body>
+</html>
