@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div id="root" data-one="test" class="test on active"> -->
+  <div id="root" data-index="1">
+    <section class="test"></section>
+    <section class="test"></section>
+    <section class="test"></section>
+    <section class="test"></section>
+    <section class="test"></section>
+    <article class="test"></article>
+    <article class="test"></article>
+    <article class="test"></article>
+    <article class="test"></article>
+    <article class="test"></article>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+    <nav class="test1" dataseett-1=""></nav>
+    <nav class="test1"></nav>
+    <nav class="test1"></nav>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+    const testOne =document.querySelectorAll('.test')
+    const two = document.getElementsByClassName('test')
+    console.log(testOne);
+
+    for(let i = 0; i<testOne.length; i++){
+      if(testOne[1].dataset.index=1)
+      console.log(i);
+      testOne[i].style.backgtindColor = "blue";
+      testOne[i].style.width = "100px"
+      testOne[i].style.height = "100px"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // console.log(root.classList);
+    // console.log(root.dataset);
+    // console.log(typeof root.dataset.index)
+
+    // 이 두개는 같은것이다. 명시는 string으로 해줘야한다. [""]
+    // console.log(root.dataset.one);
+    // console.log(root.dataset["one"]);
+    
+  </script>
+</body>
+</html>
