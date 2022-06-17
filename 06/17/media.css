@@ -28,6 +28,9 @@ header > nav > ul {
   display: flex;
   list-style: none;
 }
+header > nav > ul > li:hover {
+  cursor: pointer;
+}
 
 main {
   height: 85vh;

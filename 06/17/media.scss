@@ -17,11 +17,15 @@ header{
     width: 80vw;
     display: flex;
     justify-content: space-between;
+    
     &>ul{
       width: 15vw;
       justify-content: space-between;
       display: flex;
       list-style: none;
+      &>li:hover{
+        cursor: pointer;
+      }
     }
   }
 }
