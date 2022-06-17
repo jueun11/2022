@@ -1,0 +1,113 @@
+* {margin: 0;
+  padding: 0;
+}
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root > div {
+  width: 500px;
+  height: 800px;
+  /* border: 1px solid black; */
+  background-color:#c4c4c4;
+  overflow:hidden;
+  z-index: 2;
+}
+.root > div header {
+  width: 500px;
+  height: 200px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.root > div header div:nth-child(1) {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  background-color: rgb(163, 149, 149);
+  overflow: hidden;
+  position: absolute;
+  top: -300px;
+  z-index: 2;
+}
+.root > div header div:nth-child(2) {
+  margin: 20px;
+  color:white;
+  z-index: 3;
+}
+.root > div main {
+  width: 500px;
+  height: 450px;
+  /* border: 1px solid black; */
+  justify-content: center;
+  display: flex;
+  z-index: 3;
+  position: ;
+}
+.root > div main > div:nth-child(1) {
+  border: 5px solid rgb(87, 87, 87);
+  border-radius: 30px;
+  width: 50px;
+  height: 150px;
+  position:absolute;
+  top: 450px;
+  /* display: flex; */
+}
+/* 페이지를 확대, 축소했을때 전체적으로 위치가 움직여버림 */
+.root > div main > div:nth-child(2) {
+  justify-content: center;
+  position:relative;
+  top: 350px;
+}
+.root > div main > div:nth-child(2) > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(87, 87, 87) ;
+  margin: 10px;
+  position: relative;
+}
+.root > div footer {
+  width: 500px;
+  height: 150px;
+  /* border: 1px solid black; */
+}
+.root > div footer div {
+  position: relative;
+  top: 30px;
+  margin: 20px;
+  font-size: 12px;
+  text-align: center;
+  /* border: 1px solid green; */
+}
+.bg  {
+  top: 0px;
+  /* position:absolute;
+  z-index: 1;
+  align-items: center;
+  top: 8.7%; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: absolute;
+}
+/* 제일 뒤에 깔리는 둥근모서리 사각형 포지션잡는것에 어려움을 겪음 */
+/* html 부분에서 부모자식관계를 정리하기 어려웠습니다 */
+.bg div {
+  /* border: 1px solid orchid; */
+  border-radius: 30%;
+  width: 600px;
+  height: 800px;
+  position: relative;
+  left: 120px;
+  background-color:rgb(95, 95, 95);
+  z-index: 1;
+}

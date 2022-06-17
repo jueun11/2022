@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    /* reset 브라우저의 기본값을 안쓰겠다 */
+    body {
+      margin: 0px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      /* background-color: gray; */
+      display: flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+      flex-direction:column;
+      /* border-bottom: solid 1px gainsboro;  */
+    }
+    ul li {
+      margin: 20px;
+      transition: 1s;
+    }
+    ul li:hover {
+      margin: 40px;
+      color: blue;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <ul>  
+    <li>Gmail</li>
+    <li>이미지</li>
+    <li>김주은</li>
+    <li>프로필</li>
+    <li>메뉴</li>
+  </ul>
+</body>
+</html>

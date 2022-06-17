@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 20;
+      box-sizing: border-box;
+      list-style: none;
+    }
+    .root {
+      width: 100vw;
+      height: 100vh;
+      border: 5px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    div ul{ display: flex;
+      text-align: center;
+      justify-content: space-around;
+      align-items: center;
+      height: 90vh;
+      width: 95vw;
+      background-color: rgb(158, 209, 182);
+      flex-direction: column;
+      padding: 0;
+    }
+    div ul {
+    }
+    /* y축기준 가운데가 아니라 위에 있는 느낌 */
+    /* 제일 끝 흰색 여백부분이 사이즈에 따라 바뀌게는 햇는데, 전체화면했을때 비율이 맞지않는다 */
+    div ul li{
+      background-color: white;
+      width: 70vw;
+      height: 5vh;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="root">
+    <ul>
+      <li>logo</li>
+      <li>id-field</li>
+      <li>pass-field</li>
+      <li>forgot password?</li>
+      <li>login button</li>
+      <li>sign up button</li>
+      <li>QR rect</li>
+      <li>copyrigt text</li>
+    </ul>
+  </div>
+</body>
+</html>

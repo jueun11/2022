@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .root {
+      overflow: hidden;
+    }
+    .root div:nth-child(1) {
+      width: 50vw;
+      height: 100vh;
+      background-color: #c4c4c4;
+      display: flex;
+      position: relative;
+    }
+    .block {
+      margin-left: 20px;
+      overflow: hidden;
+      display: flex;
+    }
+    .block div:nth-child(1):hover {
+      background: aqua;
+    }
+    .block div:nth-child(1) {
+      width: 500px;
+      height: 300px;
+      background-color: rgb(255, 132, 132);
+      position: absolute;
+      /* position: relative; */
+      /* absolute빼고는 겹쳐지지않는다 */
+      top: 100px;
+      left: 35%;
+    }
+    .block div:nth-child(2) {
+      width: 500px;
+      height: 300px;
+      background-color: rgb(255, 197, 197);
+      position: absolute;
+      display: flex;
+      top: 650px;
+    }
+    .block div:nth-child(3) {
+      width: 50vw;
+      height: 20vh;
+      position: absolute;
+      top: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="root">
+    <div></div>
+    <div class="block">
+      <div></div>
+      <div></div>
+      <div>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a</div>
+  </div>
+  </div>
+</body>
+</html>

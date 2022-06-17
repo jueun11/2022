@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0;}
+    .root {
+      width: 100vw;
+      height: 100vh;
+    }
+    .yb {
+      display: flex;
+      /* border: 1px solid black; */
+    }
+    .yb div {
+      width: 95vw;
+      height: 5vh;
+      margin: 2.5vw;
+      background-color: skyblue;
+      /* border: 1px solid black; */
+    }
+    .box {
+      margin-left: 2.5vw;
+      display: flex;
+    }
+    .box div:nth-child(1) {
+      width: 50vw;
+      height: 50vh;
+      background-color: salmon;
+      display: flex;
+    }
+    .box div:nth-child(2) {
+      display:flex;
+      position: absolute;
+      /* margin: 2.5vw; */
+    }
+    .box div:nth-child(2) div:nth-child(1) {
+      background-color: salmon;
+      width: 20vw;
+      height: 35vh;
+      float: right;
+      display: flex;
+      position: absolute;
+      left: 50vw;
+      margin: 2.5vw;
+    }    
+    .box div:nth-child(2) div:nth-child(2) {
+      background-color: salmon;
+      width: 20vw;
+      height: 35vh;
+      display: flex;
+      left: 72.5vw;
+      position: absolute;
+      margin: 2.5vw;
+    }
+    .box div:nth-child(2) div:nth-child(3) {
+      width: 42.5vw;
+      height: 20vh;
+      display: flex;
+      position: absolute;
+      top: 37.5vh;
+      margin: 2.5vw;
+      left: 50vw;
+    }
+    .foot {
+      display: flex;
+      padding: 2.5vw;
+    }
+    .foot div {
+      width: 100vw;
+      height: 35vh;
+      background-color: salmon;
+    }
+  </style>
+</head>
+<body>
+  <div class="root">
+    <div class="yb">
+      <div></div>
+    </div>
+    <div class="box">
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quo optio nobis fuga a dolore dicta iusto?</div>
+      </div>
+      <div></div>
+    </div>
+    
+    <div class="foot">
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    div {
+      *{margin:0; padding:0}
+
+.container {
+  width:100vw;
+  height:100vh;
+  background-color: #333;
+}
+
+.container div {
+  width: 100vw;
+  height: 5vh;
+  background-color:#f1f3f4;
+}
+.container div ul {
+  list-style-type: none;
+  width:inherit;
+  height:inherit;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background-color:#f1f3f4;
+  transition:1s;
+}
+.container div ul li {
+  width:5vw;
+  color:salmon;
+}
+  </style>
+</head>
+<body>
+  <div>
+    <h1>유미의 세포들</h1>
+  </div>
+  <div class="container">
+    <div>
+      <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+      </ul>
+    </div>
+    
+    <script>
+    let currentHeightValue = 0;
+    const targetElement = document.querySelector('.container div ul');
+
+    targetElement.addEventListener('click', function() {
+      let getStyle = window.getComputedStyle(targetElement).getPropertyValue('height');
+      // console.log(getStyle.getPropertyValue('height'));
+      let getHeightValue = getStyle.split('px');
+      let getData = Math.round((getHeightValue[0]));
+      console.log(getData);
+      currentHeightValue = currentHeightValue + getData;
+      targetElement.style.height = currentHeightValue + "px";
+
+
+    });
+
+
+
+
+    </script>
+</body>
+</html>

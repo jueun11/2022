@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding:0;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    header {
+      border: 1px solid red;
+      width: 100vw;
+      height: 20vh;
+    }
+    header nav:nth-child(1) {
+      border: 1px solid blue;
+      width: 15vw;
+      height:inherit ;
+      float: left;
+    }
+    header nav:nth-child(2) {
+      border: 1px solid skyblue;
+      width: 15vw;
+      height:inherit ;
+      float: right;
+    }
+    main {
+      border: 1px solid green;
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+      margin: 10px;
+    }
+    main > div:nth-child(1) {
+      width: 50vw;
+      height: 50vh;
+      border: 1px solid peru;
+    }
+    footer {
+      width: 100vw;
+      height: 30vh;
+      background-color:brown;
+    }
+    main > div:nth-child(2) {
+      width: 50vw;
+      height: 50vh;
+      border: 1px solid blue;      
+    }
+    main > div:nth-child(2) > div:nth-child(1) {
+      width: 50vw;
+      height: 30vh;
+      border: 1px solid violet;
+      display: flex;
+    }
+    main > div:nth-child(2) > div:nth-child(2) {
+      width: 50vw;
+      height: 20vh;
+      background-color: aqua;
+    }
+    main > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+     width: 25vw;
+     height: 30vh;
+     background-color: blueviolet;
+    }    main > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+     width: 25vw;
+     height: 30vh;
+     background-color: darkkhaki;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav></nav>
+    <nav></nav>
+  </header>
+  <main>
+    <div></div>
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div></div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

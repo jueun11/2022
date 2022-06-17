@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --color-1:#885CED;
+      --color-2:#6560F7;
+      --color-3:#6560F7;
+      --color-4:#4C6FE0;
+      --color-5:#56A8FC;
+    }
+    body > div {
+      position:absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid var(--color-5);
+      margin: 10px;
+    }
+    body > div:nth-child(1) {top: 50px; left: 50px;background-color: var(--color-1);}
+    body > div:nth-child(2) {top: 70px; left: 70px;background-color: var(--color-2);}
+    body > div:nth-child(3) {top: 90px; left: 90px;background-color: var(--color-3); z-index: 5;}
+    body > div:nth-child(4) {top: 110px; left: 110px;background-color: var(--color-4);}
+    body > div:nth-child(5) {top: 130px; left: 130px;background-color: var(--color-5);}
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

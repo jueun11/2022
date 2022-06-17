@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #root {
+      width: 1920px;
+      height: 1080px;
+      background-color: #c4c4c4;
+      display: flex;
+    }
+    section {
+      border: 1px dotted #000;
+    }
+    #root > section {
+      width: 50vw;
+      height: 100vh;
+    }
+    /* 왼쪽 */
+    #root > section:nth-child(1) {
+      /* background-color: blue; */
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    #root > section:nth-child(1) > div {
+      width: 30vw;
+      height: 30vw;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid black;
+      position: relative;
+    }
+    #root > section:nth-child(1) > div:nth-child(1) {
+      z-index: 2;
+      left: 20%;
+    }
+    #root > section:nth-child(1) > div:nth-child(2) {
+      z-index: 1;
+      top: 100px;
+      /* position: relative; */
+      position: absolute;
+    }
+
+
+
+
+
+    /* 오른쪽 */
+    #root > section:nth-child(2) {
+      /* background-color: #000; */
+      display: flex;
+      align-items: center;
+    }
+    #root > section:nth-child(2) > div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section>
+      <!-- 원 -->
+      <div></div>
+      <div></div>
+    </section>
+    <section>
+      <div>
+        <h1>hello</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, rem, unde mollitia atque pariatur nemo perferendis illum provident, placeat maxime amet accusamus fuga perspiciatis nihil nisi! Omnis suscipit labore harum.</p>
+        <div>friday</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

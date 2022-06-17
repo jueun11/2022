@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .selector {
+      color: red;
+    }
+    body {
+      padding-left: 5%;
+    }
+    li {
+      font-size: 30px;
+    }
+    li:nth-child(4) {
+      color: aqua;
+    }
+    ul li[color="red"] {
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>짬뽕</li>
+    <li class="selector">제육볶음</li>
+    <li>도시락</li>
+    <li>돈까스</li>
+    <li>초밥</li>
+  </ul>
+</body>
+</html>

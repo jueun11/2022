@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section {
+      width: 30vw;
+      height: 30vw;
+      /* border: 1px solid black; */
+      background-color: rgb(255, 176, 123);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section > div {
+      width: 80%;
+      height: 80%;
+      /* border: 1px solid black; */
+      background-color: rgb(245, 107, 72);
+      border-radius: 50%;
+    }
+    section > div:nth-child(1) > div:nth-child(1) {
+      display:flex ;
+      top: 5vw;
+      position: relative;
+      left: 3vw;
+    }
+    section > div:nth-child(1) > div:nth-child(1) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }
+    section > div:nth-child(1) > div:nth-child(2) {
+      display:flex ;
+      top: 12vw;
+      position: relative;
+      left: 18vw;
+    }
+    section > div:nth-child(1) > div:nth-child(2) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }
+    section > div:nth-child(1) > div:nth-child(3) {
+      display:flex ;
+      top: 2vw;
+      position: relative;
+      left: 12vw;
+    }
+    section > div:nth-child(1) > div:nth-child(3) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }
+    section > div:nth-child(1) > div:nth-child(4) {
+      display:flex ;
+      top: 15vw;
+      position: relative;
+      left: 4vw;
+    }
+    section > div:nth-child(1) > div:nth-child(4) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }
+    section > div:nth-child(1) > div:nth-child(5) {
+      display:flex ;
+      top: 10vw;
+      position: relative;
+      left: 10vw;
+    }
+    section > div:nth-child(1) > div:nth-child(5) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }
+    section > div:nth-child(1) > div:nth-child(6) {
+      display:flex ;
+      top: 18vw;
+      position: relative;
+      left: 10vw;
+    }
+    section > div:nth-child(1) > div:nth-child(6) > div {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      background-color: rgb(235, 80, 60);
+    }    
+    section > div:nth-child(1) > div:nth-child(7) {
+      display:flex ;
+      top: 5vw;
+      position: relative;
+      left: 8vw;
+      transform: rotate(15deg);
+    }
+    section > div:nth-child(1) > div:nth-child(7) > div {
+      position: absolute;
+      width: 1vw;
+      height: 5vw;
+      background-color: rgb(40, 168, 28);
+    }
+    section > div:nth-child(1) > div:nth-child(8) {
+      display:flex ;
+      top: 20vw;
+      position: relative;
+      left: 8vw;
+      transform: rotate(105deg);
+    }
+    section > div:nth-child(1) > div:nth-child(8) > div {
+      position: absolute;
+      width: 1vw;
+      height: 5vw;
+      background-color: rgb(40, 168, 28);
+    }
+    section > div:nth-child(1) > div:nth-child(9) {
+      display:flex ;
+      top: 30vw;
+      position: relative;
+      left: 1vw;
+      transform: rotate(85deg);
+    }
+    section > div:nth-child(1) > div:nth-child(9) > div {
+      position: absolute;
+      width: 1vw;
+      height: 5vw;
+      background-color: rgb(40, 168, 28);
+    }
+    section > div:nth-child(1) > div:nth-child(10) {
+      display:flex ;
+      top: 20vw;
+      position: relative;
+      left: 18vw;
+      transform: rotate(30deg);
+    }
+    section > div:nth-child(1) > div:nth-child(10) > div {
+      position: absolute;
+      width: 1vw;
+      height: 5vw;
+      background-color: rgb(40, 168, 28);
+    }    
+    section > div:nth-child(1) > div:nth-child(11) {
+      display:flex ;
+      top: 20vw;
+      position: relative;
+      left: 18vw;
+    }
+    section > div:nth-child(1) > div:nth-child(11) > div {
+      position: absolute;
+      width: 1vw;
+      height: 1vw;
+      border-radius: 50%;
+      background-color: black;
+    }
+    section > div:nth-child(1) > div:nth-child(12) {
+      display:flex ;
+      top: 10vw;
+      position: relative;
+      left: 8vw;
+    }
+    section > div:nth-child(1) > div:nth-child(12) > div {
+      position: absolute;
+      width: 1vw;
+      height: 1vw;
+      border-radius: 50%;
+      background-color: black;
+    }
+    section > div:nth-child(1) > div:nth-child(13) {
+      display:flex ;
+      top: 7vw;
+      position: relative;
+      left: 16vw;
+    }
+    section > div:nth-child(1) > div:nth-child(13) > div {
+      position: absolute;
+      width: 1vw;
+      height: 1vw;
+      border-radius: 50%;
+      background-color: black;
+    }
+    section > div:nth-child(1) > div:nth-child(14) {
+      transform: rotate(30deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="root">
+    <section>
+      <div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div>
+            <img src="p.svg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>
