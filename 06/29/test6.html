@@ -17,19 +17,23 @@
     //   box = box + test;
     // }    
     let liElement = ``;
+    //없음. 비어있음
     for(let i= 0; i< 100; i++){
       liElement = liElement + `<li></li>`;
+      //빈거 + li하나
+      // -> li + li 반복....lili+li...
     }
     console.log(liElement);
     let box = `
     <ul>
       ${liElement}
-      천번을 반복해서 li를 만들기만 하면 될 것 같음
+       // 아까 for문으로 만든 100개의 li를 배열의 형태로 ul안에 넣음 
     </ul>
     `;  
     console.log(box);
     //innerHTML활용해서 HTML편집
     root.innerHTML = box;
+    //아까 li를 넣은 ul을 root에 넣음..``를 활용해 태그로 만들고,걍바로 갖다넣음
     console.log(document.body);
   </script>
 </body>
