@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const root = document.createElement('div');
+    document.body.appendChild(root);
+    const ul = document.createElement('ul');
+    root.appendChild(ul);
+
+    
+    //n초뒤 ~ 작동
+    const array = ['img-1.jpg'];
+    
+    setTimeout(() => {
+      for(i=0; i<100; i++){
+        const li = document.createElement('li');
+        const img = document.createElement('img');
+        
+        //이미지파일을 번호로 하면 일케 쓸 수 있을듯?
+        //경로와 이미지 파일명 활용
+        img.setAttribute('src', `images/images/images-[i].jpg`);
+
+        li.appendChild(img);
+        ul.appendChild(li);
+      }
+    }, 1000);
+
+    ul.innerHTML = "피곤하다";
+    console.log(document.body);
+  </script>
+</body>
+</html>
