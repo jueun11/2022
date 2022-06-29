@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+
+    // let test = '<ul></ul>'
+    // let box = '';
+    // for(let i=0; i < 100; i++){
+    //   box = box + test;
+    // }    
+    let liElement = ``;
+    for(let i= 0; i< 100; i++){
+      liElement = liElement + `<li></li>`;
+    }
+    console.log(liElement);
+    let box = `
+    <ul>
+      ${liElement}
+      천번을 반복해서 li를 만들기만 하면 될 것 같음
+    </ul>
+    `;  
+    console.log(box);
+    //innerHTML활용해서 HTML편집
+    root.innerHTML = box;
+    console.log(document.body);
+  </script>
+</body>
+</html>
