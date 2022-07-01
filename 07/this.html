@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="trigger">click</button>
+  <script>
+    //클릭한 대상이 없어지는 함수만듬
+    
+    const trigger = document.querySelector('#trigger');
+    console.log(trigger);
+    function removerElement(element) {
+      elemet.addEventListener('click',function(){
+        this.remove(trigger);
+      })
+    }
+
+  removerElement(trigger);
+
+
+  const handler = {
+    removerElement: function(element){
+      element.addEventListener('click',function(){
+        this.remove(this);
+      });
+    }
+  }
+
+  handler.removerElement(trigger);
+
+
+  </script>
+</body>
+</html>
